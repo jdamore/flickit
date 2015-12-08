@@ -1,4 +1,4 @@
-.container {
+:local(.container) {
 
 	display: -webkit-flexbox;
     display: -ms-flexbox;
@@ -11,34 +11,38 @@
     justify-content: center;
 
 	background: #999999;
-	border: 3px solid;
+	border: 1px solid;
   	font-family: sans-serif;
   	height: 100vh;
   	font-size: 20vh;
 
-  	&.flipped {
+  	&:local(.flipped) {
 		transform: rotateY(180deg);
 		transition: 0.8s;
 		transform-style: preserve-3d;
   	}
 
-  	.front, .back {
+  	:local(.front), :local(.back) {
   		border: 0px solid;
   	}
 
-  	.front {
+  	:local(.front) {
   		z-index: 1;
-  		&.flipped {
+  		&:local(.flipped) {
   			display: none;
   		}
   	}
 
-  	.back {
+  	:local(.back) {
   		display: none;
   		z-index: 2;
 		transform: rotateY(180deg);
-  		&.flipped {
+  		&:local(.flipped) {
   			display: block;
   		} 
+  	}
+
+  	.flipped-hidden {
+  		display: none;
   	}
 }
