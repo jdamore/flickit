@@ -16,19 +16,19 @@ module.exports = React.createClass({
 
   onClick: function(event) {
     console.log('onClick');
-    document.getElementById('card').classList.toggle('flick')
+    document.getElementById('card').classList.toggle('flipped')
+    document.getElementById('front').classList.toggle('flipped')
+    setTimeout(function(){document.getElementById('back').classList.toggle('flipped')}, 500);
   },
 
   render: function() {
     console.log('render');
   	return (
-  		<div id='card' onClick={this.onClick} className={styles.container}>
-  				<div className={styles.flicker}>
-  					<div className={styles.word}>{this.state.word}</div>
-  					<div className={styles.score}>{this.state.score}</div>
-  				</div>
-  		</div>
-  		);
+      <div id='card' className='container' onClick={this.onClick} >
+        <span id='front' className='front'>{this.state.word}</span>
+        <span id='back' className='back'>{this.state.score}</span>
+      </div>
+  	);
   }
 
 });
