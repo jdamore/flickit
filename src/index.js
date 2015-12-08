@@ -1,4 +1,4 @@
 import ReactDom from 'react-dom';
-import Flickit from './flickit';
+import App from './app';
 
-ReactDom.render(<Flickit />, document.getElementById('content'));
+React.render(<App />, document.body);

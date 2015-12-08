@@ -17,7 +17,8 @@ module.exports = {
 
             },
             // CSS Loader: style-loader & css-loader
-            { test: /.css$/, loader: 'style-loader!css-loader',exclude: /node_modules/ },
+            // { test: /.css$/, loader: 'style-loader!css-loader', exclude: /node_modules/ },
+            { test: /\.scss$/, loaders: ['style', 'css', 'sass'], exclude: /node_modules/ },
             { test: /\.(png|jpg)$/, loader: 'file-loader?name=images/[name].[ext]' },
             { test: /\.woff$/, loader: 'file-loader?name=fonts/[name].[ext]' }
         ]
