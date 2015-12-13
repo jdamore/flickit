@@ -1,3 +1,5 @@
+var path = require('path');
+
 module.exports = {
     entry: './src/index.js',
     output: {
@@ -26,8 +28,10 @@ module.exports = {
     externals: {
         'react': 'React' //don't bundle the 'react' npm package with our bundle.js, instead get it from a global 'React' variable
     },
+    resolveLoader: { 
+        root: path.join(__dirname, 'node_modules')
+    },
     resolve: {
-        root: path.join(__dirname, 'node_modules'),
         extensions: ['', '.js', '.jsx']
     }
 }
