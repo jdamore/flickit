@@ -14,18 +14,30 @@ describe('Card', () => {
 
 	describe('render', () => {
 
-		let cardNode;
+		let cardDOMNode;
 	
 		beforeEach(function() {
-			cardNode = ReactDOM.findDOMNode(ReactTestUtils.renderIntoDocument(<Card/>));
+			let cardComponent = ReactTestUtils.renderIntoDocument(<Card/>);
+			cardDOMNode = ReactDOM.findDOMNode(cardComponent);
 		});
 	
   		it('renders a <div>', () => {
-  			expect(cardNode.tagName).toEqual('DIV');
+  			expect(cardDOMNode.tagName).toEqual('DIV');
 		});
 	
   		it('renders the card', () => {
-  			expect(cardNode.getAttribute('name')).toEqual('card');
+  			expect(cardDOMNode.getAttribute('name')).toEqual('card');
+		});
+	
+  		it('has child nodes', () => {expect(cardDOMNode.hasChildNodes()).toEqual(true);
+		});
+	
+  		it('has a front', () => {
+  			expect(cardDOMNode.childNodes[0].getAttribute('name')).toEqual('card-front');
+		});
+	
+  		it('has a back', () => {
+  			expect(cardDOMNode.childNodes[1].getAttribute('name')).toEqual('card-back');
 		});
 
 	});

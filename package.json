@@ -14,7 +14,7 @@
   "homepage": "https://github.com/jdamore/flickit#readme",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --verbose",
     "build": "webpack --progress --colors",
     "start": "npm run serve | npm run dev",
     "serve": "./node_modules/.bin/http-server -p 8080",
