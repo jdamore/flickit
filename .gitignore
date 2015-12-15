@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
+!node_modules/react/dist/react-with-addons.js
 npm-debug.log
 DomElement_Attributes.js
 DomElement_Functions.js
