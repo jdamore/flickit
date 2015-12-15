@@ -22,17 +22,15 @@ class Card extends React.Component {
       <div name="card" id={'card-'+this.props.id} className={styles.container} onClick={this.onClick} >
         <span name="card-front" id={'card-'+this.props.id+'-front'} className={styles.front}>{this.state.word}</span>
         <span name="card-back" id={'card-'+this.props.id+'-back'} className={styles.back}>{this.state.score}</span>
-        <span name="card-flipped-class" id={'card-'+this.props.id+'-flipped'} className="flipped-hidden">{styles.flipped}</span>
       </div>
     );
   }
  
   _onClick() {
-    let flipped = this.cardChild('flipped').innerHTML;
-    this.card().classList.toggle(flipped);
-    this.cardChild('front').classList.toggle(flipped);
+    this.card().classList.toggle(styles.flipped);
+    this.cardChild('front').classList.toggle(styles.flipped);
     setTimeout(function() {
-      this.cardChild('back').classList.toggle(flipped)
+      this.cardChild('back').classList.toggle(styles.flipped)
     }.bind(this), 500);
   }
  
