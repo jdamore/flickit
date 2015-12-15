@@ -1,4 +1,5 @@
 .DS_Store
+!bundle.js
 node_modules
 !node_modules/react/dist/react-with-addons.js
 npm-debug.log
