@@ -1,7 +1,7 @@
 .DS_Store
 !bundle.js
 node_modules
-!node_modules/react/dist/react-with-addons.js
+!node_modules/react/dist/react-with-addons.min.js
 npm-debug.log
 DomElement_Attributes.js
 DomElement_Functions.js
