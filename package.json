@@ -16,9 +16,7 @@
   "scripts": {
     "test": "jest --verbose",
     "build": "webpack --progress --colors",
-    "start": "npm run serve | npm run dev",
-    "serve": "./node_modules/.bin/http-server -p 8080",
-    "dev": "webpack-dev-server --progress --colors --port 8090"
+    "dev": "npm run build | webpack-dev-server --progress --colors --port 8090"
   },
   "babel": {
     "presets": [
