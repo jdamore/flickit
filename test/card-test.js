@@ -1,8 +1,10 @@
 'use strict';
 
+
 jest.dontMock('./flickit-test-utils');
 jest.dontMock('../src/app/card/index');
 
+// import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils';
@@ -12,34 +14,51 @@ const Card = require('../src/app/card/index');
 
 describe('Card', () => {
 
+	let card, cardFront, cardBack;
+
+	beforeEach(function() {
+		card = ReactTestUtils.renderIntoDocument(<Card/>);
+		let cardChildren = ReactTestUtils.scryRenderedDOMComponentsWithTag(card, 'span');
+		cardFront = Array.find(cardChildren, n => n.getAttribute('name') == 'card-front');
+		cardBack = Array.find(cardChildren, n => n.getAttribute('name') == 'card-back');
+	});
+
 	describe('render', () => {
 
-		let cardDOMNode;
+		let cardNode;
 	
 		beforeEach(function() {
-			let cardComponent = ReactTestUtils.renderIntoDocument(<Card/>);
-			cardDOMNode = ReactDOM.findDOMNode(cardComponent);
+			cardNode = ReactDOM.findDOMNode(card);
 		});
 	
   		it('renders a <div>', () => {
-  			expect(cardDOMNode.tagName).toEqual('DIV');
+  			expect(cardNode.tagName).toEqual('DIV');
 		});
 	
   		it('renders the card', () => {
-  			expect(cardDOMNode.getAttribute('name')).toEqual('card');
-		});
-	
-  		it('has child nodes', () => {expect(cardDOMNode.hasChildNodes()).toEqual(true);
+  			expect(cardNode.getAttribute('name')).toEqual('card');
 		});
 	
   		it('has a front', () => {
-  			expect(cardDOMNode.childNodes[0].getAttribute('name')).toEqual('card-front');
+  			expect(cardFront).not.toBeUndefined();
 		});
 	
   		it('has a back', () => {
-  			expect(cardDOMNode.childNodes[1].getAttribute('name')).toEqual('card-back');
+  			expect(cardBack).not.toBeUndefined();
 		});
 
 	});
+
+	xdescribe('onclick', () => {
+
+		beforeEach(function() {
+			card.onClick();
+		});
+	
+  		it('flips the front', () => {
+  			expect(cardFront.classList).toContain('toggled');
+		});
+
+	})
 
 });

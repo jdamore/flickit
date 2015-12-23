@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import ReactDOM from 'react-dom';
 import styles from './index.scss';
 
 class Card extends React.Component {
@@ -9,8 +10,8 @@ class Card extends React.Component {
     super();
     this.state = { word: '', score: 0 };
     this.onClick = this._onClick.bind(this);
-    this.card = this._card.bind(this);
-    this.cardChild = this._cardChild.bind(this);
+    this.cardNode = this._cardNode.bind(this);
+    this.cardChildNode = this._cardChildNode.bind(this);
   }
 
   componentDidMount() {
@@ -27,19 +28,21 @@ class Card extends React.Component {
   }
  
   _onClick() {
-    this.card().classList.toggle(styles.flipped);
-    this.cardChild('front').classList.toggle(styles.flipped);
+
+    this.cardNode().classList.toggle(styles.flipped);
+    this.cardChildNode('front').classList.toggle(styles.flipped);
     setTimeout(function() {
-      this.cardChild('back').classList.toggle(styles.flipped)
+      this.cardChildNode('back').classList.toggle(styles.flipped)
     }.bind(this), 500);
   }
  
-  _card() {
-    return document.getElementById('card-'+this.props.id);
+  _cardNode() {
+    let cardNode = ReactDOM.findDOMNode(this);
+    return cardNode;
   }
  
-  _cardChild(childId) {
-    return document.getElementById('card-'+this.props.id+'-'+childId);
+  _cardChildNode(childId) {
+    return Array.find(this.cardNode().childNodes, n => n.getAttribute('id')=='card-'+this.props.id+'-'+childId);
   }
 
 }
