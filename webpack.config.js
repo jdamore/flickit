@@ -8,6 +8,7 @@ module.exports = {
     },
     module: {
         loaders: [
+        
             // JS & JXS Loader: Babel
             {
                 test: /.jsx?$/,
@@ -18,9 +19,11 @@ module.exports = {
                 }
 
             },
-            // CSS Loader: style-loader & css-loader
-            // { test: /.css$/, loader: 'style-loader!css-loader', exclude: /node_modules/ },
+
+            // CSS Loader: style-loader, css-loader, sass-loader
             { test: /\.scss$/, loaders: ['style', 'css', 'sass'], exclude: /node_modules/ },
+
+            // Other Loaders
             { test: /\.(png|jpg)$/, loader: 'file-loader?name=images/[name].[ext]' },
             { test: /\.woff$/, loader: 'file-loader?name=fonts/[name].[ext]' }
         ]
