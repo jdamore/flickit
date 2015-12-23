@@ -27,6 +27,7 @@
   "jest": {
     "testDirectoryName": "test",
     "scriptPreprocessor": "<rootDir>/jest-preprocessor.js",
+    "setupEnvScriptFile": "<rootDir>/jest-environment.js",
     "unmockedModulePathPatterns": [
       "<rootDir>/node_modules/react",
       "<rootDir>/node_modules/react-dom",
@@ -38,6 +39,7 @@
     ]
   },
   "dependencies": {
+    "babel-polyfill": "^6.3.14",
     "react": "^0.14.2",
     "react-dom": "^0.14.2"
   },
