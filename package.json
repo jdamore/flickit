@@ -27,6 +27,7 @@
   "jest": {
     "testDirectoryName": "test",
     "scriptPreprocessor": "<rootDir>/jest-preprocessor.js",
+    "setupEnvScriptFile": "<rootDir>/jest-environment.js",
     "unmockedModulePathPatterns": [
       "<rootDir>/node_modules/react",
       "<rootDir>/node_modules/react-dom",
