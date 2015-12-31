@@ -4,60 +4,105 @@
 jest.dontMock('./flickit-test-utils');
 jest.dontMock('../src/app/card/index');
 
-// import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils';
 
 const FlickitTestUtils = require('./flickit-test-utils');
 const Card = require('../src/app/card/index');
+const Styles = require('../src/app/card/index.scss');
+
+
+Styles.container = 'container';
+Styles.flipped = 'flipped';
+Styles.front = 'front';
+Styles.back = 'back';
 
 describe('Card', () => {
 
-	let card, cardFront, cardBack;
+	let card;
+	let cardNode, cardFrontNode, cardBackNode;
 
 	beforeEach(function() {
+
 		card = ReactTestUtils.renderIntoDocument(<Card/>);
+		cardNode = ReactDOM.findDOMNode(card);
+
 		let cardChildren = ReactTestUtils.scryRenderedDOMComponentsWithTag(card, 'span');
-		cardFront = Array.find(cardChildren, n => n.getAttribute('name') == 'card-front');
-		cardBack = Array.find(cardChildren, n => n.getAttribute('name') == 'card-back');
+		cardFrontNode = Array.find(cardChildren, n => n.getAttribute('name') == 'card-front');
+		cardBackNode = Array.find(cardChildren, n => n.getAttribute('name') == 'card-back');
 	});
 
 	describe('render', () => {
 
-		let cardNode;
-	
-		beforeEach(function() {
-			cardNode = ReactDOM.findDOMNode(card);
-		});
-	
-  		it('renders a <div>', () => {
+  		it('renders the card', () => {
   			expect(cardNode.tagName).toEqual('DIV');
 		});
 	
-  		it('renders the card', () => {
+  		it('renders the front', () => {
+  			expect(cardFrontNode.tagName).toEqual('SPAN');
+		});
+	
+  		it('renders the back', () => {
+  			expect(cardBackNode.tagName).toEqual('SPAN');
+		});
+	
+  		it('renders the card with the correct name', () => {
   			expect(cardNode.getAttribute('name')).toEqual('card');
 		});
 	
-  		it('has a front', () => {
-  			expect(cardFront).not.toBeUndefined();
+  		it('renders the front with the correct name', () => {
+  			expect(cardFrontNode.getAttribute('name')).toEqual('card-front');
 		});
 	
-  		it('has a back', () => {
-  			expect(cardBack).not.toBeUndefined();
+  		it('renders the back with the correct name', () => {
+  			expect(cardBackNode.getAttribute('name')).toEqual('card-back');
 		});
 
 	});
 
-	xdescribe('onclick', () => {
+	describe('onclick', () => {
 
-		beforeEach(function() {
-			card.onClick();
-		});
-	
-  		it('flips the front', () => {
-  			expect(cardFront.classList).toContain('toggled');
-		});
+		describe('first flip', () => {
+
+			beforeEach(function() {
+				card.onClick();
+			});
+		
+  			it('flips the card', () => {
+  				expect(cardNode.getAttribute('class')).toContain('flipped');
+			});
+		
+  			it('flips the front', () => {
+  				expect(cardFrontNode.getAttribute('class')).toContain('flipped');
+			});
+		
+  			it('flips the back', () => {
+  				expect(cardBackNode.getAttribute('class')).toContain('flipped');
+			});
+
+  		});
+
+		describe('second flip', () => {
+
+			beforeEach(function() {
+				card.onClick();
+				card.onClick();
+			});
+		
+  			it('unflips the card', () => {
+  				expect(cardNode.getAttribute('class')).not.toContain('flipped');
+			});
+		
+  			it('unflips the front', () => {
+  				expect(cardFrontNode.getAttribute('class')).not.toContain('flipped');
+			});
+		
+  			it('unflips the back', () => {
+  				expect(cardBackNode.getAttribute('class')).not.toContain('flipped');
+			});
+
+  		});
 
 	})
 
