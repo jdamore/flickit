@@ -12,10 +12,11 @@ class Card extends React.Component {
     this.onClick = this._onClick.bind(this);
     this.cardNode = this._cardNode.bind(this);
     this.cardChildNode = this._cardChildNode.bind(this);
+    this._styles = styles;
   }
 
   componentDidMount() {
-    this.setState( { word:'a word', score: 10} );
+    this.setState( { word:'Sapin de Noel', score: 20} );
   }
  
   render() {
@@ -28,12 +29,9 @@ class Card extends React.Component {
   }
  
   _onClick() {
-
     this.cardNode().classList.toggle(styles.flipped);
     this.cardChildNode('front').classList.toggle(styles.flipped);
-    setTimeout(function() {
-      this.cardChildNode('back').classList.toggle(styles.flipped)
-    }.bind(this), 500);
+    this.cardChildNode('back').classList.toggle(styles.flipped);
   }
  
   _cardNode() {
