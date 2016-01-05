@@ -15,8 +15,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose",
+    "watch": "webpack --watch",
     "build": "webpack --progress --colors",
-    "dev": "npm run build | webpack-dev-server --progress --colors --port 8090"
+    "dev": "webpack-dev-server --progress --colors --port 8090",
+    "start": "npm run watch | npm run dev"
   },
   "babel": {
     "presets": [
@@ -40,8 +42,8 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.3.14",
-    "react": "^0.14.2",
-    "react-dom": "^0.14.2"
+    "react": "^0.14.4",
+    "react-dom": "^0.14.4"
   },
   "devDependencies": {
     "babel-core": "^6.1.2",
@@ -55,7 +57,7 @@
     "jest-cli": "^0.8.1",
     "jest-webpack-alias": "^2.0.0",
     "node-sass": "^3.4.1",
-    "react-addons-test-utils": "~0.14.3",
+    "react-addons-test-utils": "^0.14.4",
     "sass-loader": "^3.1.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.9",
