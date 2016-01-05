@@ -19,7 +19,7 @@
     "build": "webpack --progress --colors",
     "dev": "webpack-dev-server --progress --colors --port 8090",
     "start": "npm run watch | npm run dev",
-    "feature": "node_modules/.bin/_mocha feature",
+    "feature": "node_modules/.bin/_mocha feature"
   },
   "babel": {
     "presets": [
