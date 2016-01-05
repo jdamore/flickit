@@ -2,7 +2,7 @@
 !bundle.js
 node_modules
 !node_modules/react/dist/react.min.js
-!node_modules/bable-polyfill/dist/polyfill.min.js
+!node_modules/babel-polyfill/dist/polyfill.min.js
 npm-debug.log
 DomElement_Attributes.js
 DomElement_Functions.js
