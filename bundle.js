@@ -23931,13 +23931,14 @@
 	    _this.onClick = _this._onClick.bind(_this);
 	    _this.cardNode = _this._cardNode.bind(_this);
 	    _this.cardChildNode = _this._cardChildNode.bind(_this);
+	    _this._styles = _index2.default;
 	    return _this;
 	  }
 
 	  _createClass(Card, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      this.setState({ word: 'a word', score: 10 });
+	      this.setState({ word: 'Sapin de Noel', score: 20 });
 	    }
 	  }, {
 	    key: 'render',
@@ -23960,12 +23961,9 @@
 	  }, {
 	    key: '_onClick',
 	    value: function _onClick() {
-
 	      this.cardNode().classList.toggle(_index2.default.flipped);
 	      this.cardChildNode('front').classList.toggle(_index2.default.flipped);
-	      setTimeout((function () {
-	        this.cardChildNode('back').classList.toggle(_index2.default.flipped);
-	      }).bind(this), 500);
+	      this.cardChildNode('back').classList.toggle(_index2.default.flipped);
 	    }
 	  }, {
 	    key: '_cardNode',
