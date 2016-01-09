@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.3.14",
+    "config": "^1.17.1",
     "react": "^0.14.4",
     "react-dom": "^0.14.4"
   },
