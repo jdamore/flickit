@@ -20,7 +20,7 @@ class Card extends React.Component {
   }
 
   componentDidMount() {
-    this.setState( { side: 'front', word:'Sapin de Noel', score: 20 } );
+    this.setState( { side: 'front', word:'Flipit', score: 20 } );
   }
  
   render() {
