@@ -18780,7 +18780,7 @@
 	  _createClass(Card, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      this.setState({ side: 'front', word: 'Sapin de Noel', score: 20 });
+	      this.setState({ side: 'front', word: 'Flipit', score: 20 });
 	    }
 	  }, {
 	    key: 'render',
