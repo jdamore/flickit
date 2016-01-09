@@ -8,15 +8,19 @@ class Card extends React.Component {
 
   constructor() {
     super();
-    this.state = { word: '', score: 0 };
-    this.onClick = this._onClick.bind(this);
-    this.cardNode = this._cardNode.bind(this);
-    this.cardChildNode = this._cardChildNode.bind(this);
-    this._styles = styles;
+    this.words          = ['temps', 'cela', 'constitution', 'mais', 'encore'];
+    this.state          = { word: '', score: 0 };
+    this.onClick        = this._onClick.bind(this);
+    this.cardNode       = this._cardNode.bind(this);
+    this.cardChildNode  = this._cardChildNode.bind(this);
+    this.newWord        = this._newWord.bind(this);
+    this.flipCard       = this._flipCard.bind(this);
+    this.changeWord     = this._changeWord.bind(this);
+    this._styles        = styles;
   }
 
   componentDidMount() {
-    this.setState( { word:'Sapin de Noel', score: 20} );
+    this.setState( { side: 'front', word:'Sapin de Noel', score: 20 } );
   }
  
   render() {
@@ -27,16 +31,35 @@ class Card extends React.Component {
       </div>
     );
   }
- 
+
+  _newWord() {
+    let idx = Math.floor(Math.random()*this.words.length+1);
+    let nextWord = this.words[idx];
+    return ( nextWord !== this.state.word ) ? nextWord : _newWord();
+  }
+
   _onClick() {
+    this.flipCard();
+    this.changeWord();
+  }
+
+  _changeWord() {
+    this.setState(function(previousState, currentProps) {
+      return (previousState.side==='front') ?
+        { side:'back', word:previousState.word, score: previousState.score }
+      :
+        { side:'front', word:this.newWord(), score: previousState.score };
+    });
+  }
+
+  _flipCard() {
     this.cardNode().classList.toggle(styles.flipped);
     this.cardChildNode('front').classList.toggle(styles.flipped);
     this.cardChildNode('back').classList.toggle(styles.flipped);
   }
  
   _cardNode() {
-    let cardNode = ReactDOM.findDOMNode(this);
-    return cardNode;
+    return ReactDOM.findDOMNode(this);
   }
  
   _cardChildNode(childId) {
