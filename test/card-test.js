@@ -33,6 +33,15 @@ describe('Card', () => {
 		cardBackNode = Array.find(cardChildren, n => n.getAttribute('name') == 'card-back');
 	});
 
+	describe('newWord', () => {
+
+  		it('returns a new word', () => {
+  			let word = card.newWord();
+  			expect(card.newWord()).not.toEqual(word);
+		});
+
+	});
+
 	describe('render', () => {
 
   		it('renders the card', () => {
@@ -85,7 +94,10 @@ describe('Card', () => {
 
 		describe('second flip', () => {
 
+			let word;
+
 			beforeEach(function() {
+				word = cardFrontNode.innerHTML;
 				card.onClick();
 				card.onClick();
 			});
@@ -100,6 +112,11 @@ describe('Card', () => {
 		
   			it('unflips the back', () => {
   				expect(cardBackNode.getAttribute('class')).not.toContain('flipped');
+			});
+		
+  			it('shows a new word', () => {
+				let newWord = cardFrontNode.innerHTML;
+  				expect(newWord).not.toEqual(word);
 			});
 
   		});
