@@ -26,7 +26,7 @@ test.describe('Display Card', function() {
   test.it('shows the expected word', function () {
     driver.get(config.url);
     driver.findElement(webdriver.By.name('card')).getText().then(function(text) {
-      assert.equal(text, 'Sapin de Noel', "Card not showing the right word");
+      assert.equal(text, 'Flipit', "Card showing '" + text + "'' instead of the expected 'flipit'");
     });
   });
 
