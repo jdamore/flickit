@@ -18765,10 +18765,14 @@
 
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Card).call(this));
 
+	    _this.words = ['temps', 'cela', 'constitution', 'mais', 'encore'];
 	    _this.state = { word: '', score: 0 };
 	    _this.onClick = _this._onClick.bind(_this);
 	    _this.cardNode = _this._cardNode.bind(_this);
 	    _this.cardChildNode = _this._cardChildNode.bind(_this);
+	    _this.newWord = _this._newWord.bind(_this);
+	    _this.flipCard = _this._flipCard.bind(_this);
+	    _this.changeWord = _this._changeWord.bind(_this);
 	    _this._styles = _index2.default;
 	    return _this;
 	  }
@@ -18776,7 +18780,7 @@
 	  _createClass(Card, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      this.setState({ word: 'Sapin de Noel', score: 20 });
+	      this.setState({ side: 'front', word: 'Sapin de Noel', score: 20 });
 	    }
 	  }, {
 	    key: 'render',
@@ -18797,8 +18801,38 @@
 	      );
 	    }
 	  }, {
+	    key: '_newWord',
+	    value: function (_newWord2) {
+	      function _newWord() {
+	        return _newWord2.apply(this, arguments);
+	      }
+
+	      _newWord.toString = function () {
+	        return _newWord2.toString();
+	      };
+
+	      return _newWord;
+	    }(function () {
+	      var idx = Math.floor(Math.random() * this.words.length + 1);
+	      var nextWord = this.words[idx];
+	      return nextWord !== this.state.word ? nextWord : _newWord();
+	    })
+	  }, {
 	    key: '_onClick',
 	    value: function _onClick() {
+	      this.flipCard();
+	      this.changeWord();
+	    }
+	  }, {
+	    key: '_changeWord',
+	    value: function _changeWord() {
+	      this.setState(function (previousState, currentProps) {
+	        return previousState.side === 'front' ? { side: 'back', word: previousState.word, score: previousState.score } : { side: 'front', word: this.newWord(), score: previousState.score };
+	      });
+	    }
+	  }, {
+	    key: '_flipCard',
+	    value: function _flipCard() {
 	      this.cardNode().classList.toggle(_index2.default.flipped);
 	      this.cardChildNode('front').classList.toggle(_index2.default.flipped);
 	      this.cardChildNode('back').classList.toggle(_index2.default.flipped);
@@ -18806,8 +18840,7 @@
 	  }, {
 	    key: '_cardNode',
 	    value: function _cardNode() {
-	      var cardNode = _reactDom2.default.findDOMNode(this);
-	      return cardNode;
+	      return _reactDom2.default.findDOMNode(this);
 	    }
 	  }, {
 	    key: '_cardChildNode',
