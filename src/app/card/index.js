@@ -32,8 +32,8 @@ class Card extends React.Component {
 
   _newWord() {
     let idx = Math.floor(Math.random()*this.words.length+1);
-    console.log(idx);
-    return this.words[idx];
+    let nextWord = this.words[idx];
+    return ( nextWord !== this.state.word ) ? nextWord : _newWord();
   }
 
   _onClick() {
