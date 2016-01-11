@@ -69,7 +69,7 @@ describe('Card', () => {
 
 	});
 
-	xdescribe('onclick', () => {
+	describe('onclick', () => {
 
 		describe('first flip', () => {
 
