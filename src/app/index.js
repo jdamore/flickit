@@ -10,12 +10,12 @@ class App extends React.Component {
 
 		let cards = [];
 		for (var i = 0; i < this.props.numCards; i++) {
-  			cards.push(<Card key={i} id={i}/>);
+  			cards.push(<li><Card key={i} id={i}/></li>);
 		}
 
-    	return <div id='deck' className={styles.container}>
-    	    {cards}
-    	</div>;
+    	return <ul id='deck' className={styles.container}>
+    	    {cards}    	
+    	</ul>;
 	
 	}
 }

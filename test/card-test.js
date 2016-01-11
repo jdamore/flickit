@@ -1,6 +1,5 @@
 'use strict';
 
-
 jest.dontMock('./flickit-test-utils');
 jest.dontMock('../src/app/card/index');
 
@@ -29,8 +28,8 @@ describe('Card', () => {
 		cardNode = ReactDOM.findDOMNode(card);
 
 		let cardChildren = ReactTestUtils.scryRenderedDOMComponentsWithTag(card, 'span');
-		cardFrontNode = Array.find(cardChildren, n => n.getAttribute('name') == 'card-front');
-		cardBackNode = Array.find(cardChildren, n => n.getAttribute('name') == 'card-back');
+		cardFrontNode = Array.find(cardChildren, n => n.getAttribute('name') === 'card-front');
+		cardBackNode = Array.find(cardChildren, n => n.getAttribute('name') === 'card-back');
 	});
 
 	describe('newWord', () => {
