@@ -18713,11 +18713,15 @@
 
 				var cards = [];
 				for (var i = 0; i < this.props.numCards; i++) {
-					cards.push(_react2.default.createElement(_card2.default, { key: i, id: i }));
+					cards.push(_react2.default.createElement(
+						'li',
+						null,
+						_react2.default.createElement(_card2.default, { key: i, id: i })
+					));
 				}
 
 				return _react2.default.createElement(
-					'div',
+					'ul',
 					{ id: 'deck', className: _index2.default.container },
 					cards
 				);
