@@ -1,6 +1,6 @@
 'use strict';
 
-var FlickitTestUtils = {
+var Utils = {
 
 	type: function(obj) {
     	//return Object.prototype.toString.call(obj).slice(8, -1);
@@ -28,4 +28,4 @@ var FlickitTestUtils = {
 	}
 };
 
-module.exports = FlickitTestUtils;
+module.exports = Utils;

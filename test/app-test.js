@@ -1,38 +1,61 @@
 'use strict';
 
-jest.dontMock('./flickit-test-utils');
+jest.dontMock('../src/infra/utils');
 jest.dontMock('../src/app/index');
-//jest.dontMock('../src/app/card/index');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils';
+import Utils from '../src/infra/utils';
+import Ajax from '../src/infra/ajax';
 
-const FlickitTestUtils = require('./flickit-test-utils');
 const App = require('../src/app/index');
 
 describe('App', () => {
 
-	let app, appNode;
-	let numCards = 3;
-	let deck, cards;
-
-	beforeEach(function() {
-		app = ReactTestUtils.renderIntoDocument(<App numCards={numCards}/>);
-		appNode = ReactDOM.findDOMNode(app);
-		deck = ReactTestUtils.findRenderedDOMComponentWithTag(app, 'ul');
-		cards = deck.children;
-	});
+	let app
 
 	describe('render', () => {
 
-  		it('render a deck of cards', () => {
-  			expect(deck).not.toBeUndefined();
-  			expect(deck).not.toBeNull();
+		let appNode;
+		let numCards = 3;
+		let deck, cards;
+
+		beforeEach(function() {
+			let AppTest = class extends App {
+      	componentWillMount() { }
+      };
+			app = ReactTestUtils.renderIntoDocument(<AppTest numCards={numCards}/>);
+			appNode = ReactDOM.findDOMNode(app);
+			deck = ReactTestUtils.findRenderedDOMComponentWithTag(app, 'ul');
+			cards = deck.children;
 		});
 
-  		it('render the expected number of cards', () => {
-  			expect(cards.length).toBe(numCards);
+  	it('renders a deck of cards', () => {
+  		expect(deck).not.toBeUndefined();
+  		expect(deck).not.toBeNull();
+		});
+
+  	it('renders the expected number of cards', () => {
+  		expect(cards.length).toBe(numCards);
+		});
+
+	});
+
+	describe('componentWillMount', () => {
+
+		let ajax;
+
+		beforeEach(function() {
+			ajax = new Ajax("");
+			ajax.get = jest.genMockFunction();
+			app = new App();
+  		app.setAjax(ajax);
+			app.componentWillMount();
+		});
+
+  	it('fetches the dictionary', () => {
+  			expect(ajax.get).toBeCalled();
 		});
 
 	});
