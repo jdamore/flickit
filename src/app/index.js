@@ -25,7 +25,7 @@ class App extends React.Component {
 
   componentWillMount() {
   	if(this.ajax===null) {
-  		this.ajax = new Ajax("url");
+  		this.ajax = new Ajax("http://www.google.com");
   	}
     this.ajax.get(function(){}, function(){});
   }
