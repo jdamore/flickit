@@ -1,13 +1,11 @@
-'use strict';
+let Utils = {
 
-var Utils = {
-
-	type: function(obj) {
+	type(obj) {
     	//return Object.prototype.toString.call(obj).slice(8, -1);
     	return typeof(obj);
 	},
 
-	functions: function(obj) {
+	functions(obj) {
 		var methods = [];
 		for (var m in obj) {        
 	    	if (typeof obj[m] == "function") {
@@ -17,7 +15,7 @@ var Utils = {
 	    return methods.sort();
 	},
 	
-	properties: function(obj) {
+	properties(obj) {
 		var properties = [];
 		for (var p in obj) {        
 	    	if (typeof obj[p] !== "function") {
@@ -28,4 +26,4 @@ var Utils = {
 	}
 };
 
-module.exports = Utils;
+export default Utils;

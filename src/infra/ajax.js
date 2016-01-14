@@ -3,21 +3,26 @@ class Ajax {
 	constructor(url) {
 		this.url = url;
     	this.get = this._get.bind(this);
+    	this.xhr = new XMLHttpRequest();
+    	this.setXmlHttpRequest = this._XmlHttpRequest.bind(this);
 	}
 
 	_get(success, error) {
-    	let xhr = new XMLHttpRequest();
-		xhr.open('GET', this.url);
-		xhr.send(null);
-		xhr.onreadystatechange = function() {
-			if (xhr.readyState === 4) {
-  				if (xhr.status === 200) {
+		this.xhr.open('GET', this.url);
+		this.xhr.send(null);
+		this.xhr.onreadystatechange = function() {
+			if (this.xhr.readyState === 4) {
+  				if (this.xhr.status === 200) {
   				 	success();
   				} else {
-  				 	error(xhr.status); 
+  				 	error(this.xhr.status); 
   				}
   			}
 		}
+	}
+
+	_XmlHttpRequest(xhr) {
+		this.xhr = xhr;
 	}
 }
 
