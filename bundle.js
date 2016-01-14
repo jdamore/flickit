@@ -18772,23 +18772,29 @@
 
 			this.url = url;
 			this.get = this._get.bind(this);
+			this.xhr = new XMLHttpRequest();
+			this.setXmlHttpRequest = this._XmlHttpRequest.bind(this);
 		}
 
 		_createClass(Ajax, [{
 			key: '_get',
 			value: function _get(success, error) {
-				var xhr = new XMLHttpRequest();
-				xhr.open('GET', this.url);
-				xhr.send(null);
-				xhr.onreadystatechange = function () {
-					if (xhr.readyState === 4) {
-						if (xhr.status === 200) {
+				this.xhr.open('GET', this.url);
+				this.xhr.send(null);
+				this.xhr.onreadystatechange = function () {
+					if (this.xhr.readyState === 4) {
+						if (this.xhr.status === 200) {
 							success();
 						} else {
-							error(xhr.status);
+							error(this.xhr.status);
 						}
 					}
 				};
+			}
+		}, {
+			key: '_XmlHttpRequest',
+			value: function _XmlHttpRequest(xhr) {
+				this.xhr = xhr;
 			}
 		}]);
 
@@ -18801,17 +18807,18 @@
 /* 150 */
 /***/ function(module, exports) {
 
-	'use strict';
+	"use strict";
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
 	var Utils = {
-
 		type: function type(obj) {
 			//return Object.prototype.toString.call(obj).slice(8, -1);
 			return typeof obj === "undefined" ? "undefined" : _typeof(obj);
 		},
-
 		functions: function functions(obj) {
 			var methods = [];
 			for (var m in obj) {
@@ -18821,7 +18828,6 @@
 			}
 			return methods.sort();
 		},
-
 		properties: function properties(obj) {
 			var properties = [];
 			for (var p in obj) {
@@ -18833,7 +18839,7 @@
 		}
 	};
 
-	module.exports = Utils;
+	exports.default = Utils;
 
 /***/ },
 /* 151 */
