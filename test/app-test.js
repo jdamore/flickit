@@ -1,6 +1,5 @@
 'use strict';
 
-jest.dontMock('../src/infra/utils');
 jest.dontMock('../src/app/index');
 
 import React from 'react';
@@ -9,6 +8,7 @@ import ReactTestUtils from 'react-addons-test-utils';
 import Utils from '../src/infra/utils';
 import Ajax from '../src/infra/ajax';
 
+/* This is a bug in babel-jest that forces using require */
 const App = require('../src/app/index');
 
 describe('App', () => {
