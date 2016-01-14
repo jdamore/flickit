@@ -9,6 +9,7 @@ import Utils from '../src/infra/utils';
 import Ajax from '../src/infra/ajax';
 
 /* This is a bug in babel-jest that forces using require */
+/* https://github.com/babel/babel-jest/issues/22 */
 const App = require('../src/app/index');
 
 describe('App', () => {

@@ -1,4 +1,4 @@
-//'use strict';
+'use strict';
 
 jest.dontMock('../src/infra/ajax');
 jest.dontMock('../src/infra/utils');
@@ -8,6 +8,7 @@ import Utils from '../src/infra/utils';
 import FakeXmlHttpRequest from 'fakexmlhttprequest';
 
 /* This is a bug in babel-jest that forces using require */
+/* https://github.com/babel/babel-jest/issues/22 */
 const Ajax = require('../src/infra/ajax');
 
 describe('Ajax', () => {

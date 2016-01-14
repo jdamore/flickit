@@ -1,3 +1,5 @@
+'use strict';
+
 class Ajax {
 	
 	constructor(url) {
@@ -26,4 +28,5 @@ class Ajax {
 	}
 }
 
+/* Another problem with bable-jest, does not seem to work with export default */
 module.exports = Ajax;
