@@ -30,6 +30,14 @@ test.describe('Display Card', function() {
     });
   });
 
+  // test.it('shows no JS error', function () {
+  //   driver.manage().timeouts().setScriptTimeout(5000, 1) 
+  //   promise = driver.executeAsyncScript("return window.jsErrors");
+  //   promise.then(function(returnValue) {
+  //     assert.equal(0, returnValue.length, "Found JS errors " + errors);
+  //   });
+  // });
+
 });
 
 test.afterEach(function() {
