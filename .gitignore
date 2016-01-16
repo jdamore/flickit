@@ -1,7 +1,6 @@
 .DS_Store
 public
-!node_modules/react/dist/react.min.js
-!node_modules/babel-polyfill/dist/polyfill.min.js
+bundle.js
 node_modules
 npm-debug.log
 DomElement_Attributes.js
