@@ -35,6 +35,9 @@ module.exports = {
         root: path.join(__dirname, 'node_modules')
     },
     resolve: {
-        extensions: ['', '.js', '.jsx']
+        extensions: ['', '.js', '.jsx'],
+        alias: {
+            configuration: path.join(__dirname, 'configuration', 'default')
+        }
     }
 }
