@@ -16,7 +16,7 @@
   "scripts": {
     "test": "jest --verbose",
     "watch": "webpack --watch",
-    "build": "webpack --progress --colors",
+    "build": "webpack -p --progress --colors webpack.prod.config.js",
     "dev": "webpack-dev-server --progress --colors --port 8090",
     "start": "npm run watch | npm run dev",
     "feature": "node_modules/.bin/_mocha feature"
