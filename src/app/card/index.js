@@ -14,8 +14,7 @@ class Card extends React.Component {
     this.cardChildNode  = this._cardChildNode.bind(this);
     this.newWord        = this._newWord.bind(this);
     this.flipCard       = this._flipCard.bind(this);
-    this.changeWord     = this._changeWord.bind(this);
-    this._styles        = styles;
+    this.flipState      = this._flipState.bind(this);
   }
  
   render() {
@@ -35,10 +34,10 @@ class Card extends React.Component {
 
   _onClick() {
     this.flipCard();
-    this.changeWord();
+    this.flipState();
   }
 
-  _changeWord() {
+  _flipState() {
     this.setState(function(previousState, currentProps) {
       return (previousState.side==='front') ?
         { side:'back', word:previousState.word, score: previousState.score }
