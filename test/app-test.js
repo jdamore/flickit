@@ -6,7 +6,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils';
 import Utils from '../src/infra/utils';
-import Ajax from '../src/infra/ajax';
 
 /* This is a bug in babel-jest that forces using require */
 /* https://github.com/babel/babel-jest/issues/22 */
@@ -42,23 +41,5 @@ describe('App', () => {
 		});
 
 	});
-
-	describe('componentWillMount', () => {
-
-		let ajax;
-
-		beforeEach(function() {
-			ajax = new Ajax("");
-			ajax.get = jest.genMockFunction();
-			app = new App();
-  		app.setAjax(ajax);
-			app.componentWillMount();
-		});
-
-  	it('fetches the dictionary', () => {
-  			expect(ajax.get).toBeCalled();
-		});
-
-	});
-
+	
 });
