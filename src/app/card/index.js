@@ -8,20 +8,21 @@ class Card extends React.Component {
 
   constructor() {
     super();
-    this.state          = { side: 'front', word:'Flipit', score: 5 };
+    this.state          = { side: 'front', word:'Flipit' };
     this.onClick        = this._onClick.bind(this);
     this.cardNode       = this._cardNode.bind(this);
     this.cardChildNode  = this._cardChildNode.bind(this);
     this.newWord        = this._newWord.bind(this);
     this.flipCard       = this._flipCard.bind(this);
     this.flipState      = this._flipState.bind(this);
+    this.score          = this._score.bind(this);
   }
  
   render() {
     return (
       <div name="card" id={'card-'+this.props.id} className={styles.container} onClick={this.onClick} >
         <span name="card-front" id={'card-'+this.props.id+'-front'} className={styles.front}>{this.state.word}</span>
-        <span name="card-back" id={'card-'+this.props.id+'-back'} className={styles.back}>{this.state.score}</span>
+        <span name="card-back" id={'card-'+this.props.id+'-back'} className={styles.back}>{this.score()}</span>
       </div>
     );
   }
@@ -40,9 +41,9 @@ class Card extends React.Component {
   _flipState() {
     this.setState(function(previousState, currentProps) {
       return (previousState.side==='front') ?
-        { side:'back', word:previousState.word, score: previousState.score }
+        { side:'back', word:previousState.word }
       :
-        { side:'front', word:this.newWord(), score: previousState.score };
+        { side:'front', word:this.newWord() };
     });
   }
 
@@ -50,6 +51,10 @@ class Card extends React.Component {
     this.cardNode().classList.toggle(styles.flipped);
     this.cardChildNode('front').classList.toggle(styles.flipped);
     this.cardChildNode('back').classList.toggle(styles.flipped);
+  }
+
+  _score() {
+    return 5;
   }
  
   _cardNode() {
