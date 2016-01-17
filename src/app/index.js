@@ -18,7 +18,7 @@ class App extends React.Component {
 	render() {
 		let cards = [];
 		for (var i = 0; i < this.props.numCards; i++) {
-  			cards.push(<li><Card key={i} id={i}/></li>);
+  			cards.push(<li><Card key={i} id={i} lexicon={this.props.lexicon}/></li>);
 		}
     return <ul id='deck' className={styles.container}>{cards}</ul>;
 	}

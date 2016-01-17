@@ -8,7 +8,6 @@ class Card extends React.Component {
 
   constructor() {
     super();
-    this.words          = ['temps', 'cela', 'constitution', 'mais', 'encore'];
     this.state          = { word: '', score: 0 };
     this.onClick        = this._onClick.bind(this);
     this.cardNode       = this._cardNode.bind(this);
@@ -19,7 +18,7 @@ class Card extends React.Component {
     this._styles        = styles;
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.setState( { side: 'front', word:'Flipit', score: 20 } );
   }
  
@@ -33,9 +32,9 @@ class Card extends React.Component {
   }
 
   _newWord() {
-    let idx = Math.floor(Math.random()*this.words.length+1);
-    let nextWord = this.words[idx];
-    return ( nextWord !== this.state.word ) ? nextWord : _newWord();
+    let idx = Math.floor(Math.random()*this.props.lexicon.length);
+    let nextWord = this.props.lexicon[idx].word;
+    return ( nextWord !== this.state.word ) ? nextWord : this.newWord();
   }
 
   _onClick() {

@@ -21,9 +21,10 @@ describe('Card', () => {
 
 	let card;
 	let cardNode, cardFrontNode, cardBackNode;
+	let lexicon = [{word:'word1'}, {word:'word2'}, {word:'word3'}, {word:'word4'}]
 
 	beforeEach(function() {
-		card = ReactTestUtils.renderIntoDocument(<Card/>);
+		card = ReactTestUtils.renderIntoDocument(<Card lexicon={lexicon}/>);
 		cardNode = ReactDOM.findDOMNode(card);
 		let cardChildren = ReactTestUtils.scryRenderedDOMComponentsWithTag(card, 'span');
 		cardFrontNode = Array.find(cardChildren, n => n.getAttribute('name') === 'card-front');
