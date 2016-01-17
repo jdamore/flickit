@@ -14,7 +14,7 @@ const App = require('../src/app/index');
 
 describe('App', () => {
 
-	let app
+	let app;
 
 	describe('render', () => {
 
