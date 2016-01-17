@@ -40,6 +40,28 @@ describe('Card', () => {
 
 	});
 
+	describe('score', () => {
+
+  	it('returns 5 for the flipit word', () => {
+  			expect(card.score()).toEqual(5);
+		});
+
+  	it('returns the computed score for the current word', () => {
+  			card.setState({word:'test'});
+  			let testScore = card.score();
+  			expect(testScore).not.toEqual(0);
+		});
+
+  	it('returns different computed scores for different words', () => {
+  			card.setState({word:'test'});
+  			let testScore = card.score();
+  			card.setState({word:'testAgain'});
+  			let testAgainScore = card.score();
+  			expect(testAgainScore).not.toEqual(testScore);
+		});
+
+	});
+
 	describe('render', () => {
 
   	it('renders the card', () => {

@@ -54,7 +54,7 @@ class Card extends React.Component {
   }
 
   _score() {
-    return 5;
+    return this.state.word==='Flipit' ? 5 : this.state.word.length;
   }
  
   _cardNode() {
