@@ -8,7 +8,7 @@ class Card extends React.Component {
 
   constructor() {
     super();
-    this.state          = { word: '', score: 0 };
+    this.state          = { side: 'front', word:'Flipit', score: 5 };
     this.onClick        = this._onClick.bind(this);
     this.cardNode       = this._cardNode.bind(this);
     this.cardChildNode  = this._cardChildNode.bind(this);
@@ -16,10 +16,6 @@ class Card extends React.Component {
     this.flipCard       = this._flipCard.bind(this);
     this.changeWord     = this._changeWord.bind(this);
     this._styles        = styles;
-  }
-
-  componentWillMount() {
-    this.setState( { side: 'front', word:'Flipit', score: 20 } );
   }
  
   render() {
