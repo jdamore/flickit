@@ -1,6 +1,5 @@
 'use strict';
 
-import Ajax from '../infra/ajax';
 import Utils from '../infra/utils';
 
 import React from 'react';
@@ -11,8 +10,6 @@ class App extends React.Component {
 
   constructor() {
     super();
-    this.setAjax = this._ajax.bind(this);
-    this.ajax = null;
   }
 
 	render() {
@@ -21,17 +18,6 @@ class App extends React.Component {
   			cards.push(<li><Card key={i} id={i} lexicon={this.props.lexicon}/></li>);
 		}
     return <ul id='deck' className={styles.container}>{cards}</ul>;
-	}
-
-  componentWillMount() {
-  	if(this.ajax===null) {
-  		this.ajax = new Ajax("http://www.google.com");
-  	}
-    this.ajax.get(function(){}, function(){});
-  }
-
-	_ajax(ajax) {
-		this.ajax = ajax;
 	}
 }
 
