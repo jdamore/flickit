@@ -1,16 +1,27 @@
 :local(.container) {
 
 	list-style-type: none;
-	margin: 0;
-	padding: 0;
 	height: 100%;
 
-	:local(.element) {
-    display: -moz-inline-stack;
-    display: inline-block;
-    vertical-align: top;
-  	width: 48vw;
-  	height: 50vh;
-  	margin: 4px 1px 1px 2px;
+	:local(.scoreboard) {
+  	height: 15vh;
+	}
+
+	:local(.deck) {
+
+  	height: 85vh;
+		margin: 0;
+		padding: 0;
+
+		:local(.card) {
+
+  	  display: -moz-inline-stack;
+  	  display: inline-block;
+  	  vertical-align: top;
+  		width: 48vw;
+  		height: 50vh;
+  		margin: 4px 1px 1px 2px;
+
+		}
 	}
 }

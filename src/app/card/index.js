@@ -20,9 +20,9 @@ class Card extends React.Component {
  
   render() {
     return (
-      <div name="card" id={'card-'+this.props.id} className={styles.container} onClick={this.onClick} >
-        <span name="card-front" id={'card-'+this.props.id+'-front'} className={styles.front}>{this.state.word}</span>
-        <span name="card-back" id={'card-'+this.props.id+'-back'} className={styles.back}>{this.score()}</span>
+      <div name='card' id={'card-'+this.props.id} className={styles.container} onClick={this.onClick} >
+        <span name='card-front' id={'card-'+this.props.id+'-front'} className={styles.front}>{this.state.word}</span>
+        <span name='card-back' id={'card-'+this.props.id+'-back'} className={styles.back}>{this.score()}</span>
       </div>
     );
   }
