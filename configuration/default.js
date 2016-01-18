@@ -2,16 +2,13 @@
 
 let Configuration = {
 
-	lexicon: [
+	lexicon:
 		{
-			word: 'lorem',
-			media: 'http://...'
-		},
-		{
-			word: 'ipsum',
-			media: 'http://...'
+			en: [
+				{ word: 'lorem' },
+				{ word: 'ipsum' }
+			]
 		}
-	]
 }
 
 module.exports = Configuration;

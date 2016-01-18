@@ -2,248 +2,784 @@
 
 let Configuration = {
 
-	lexicon: [
-		{
-        "id": 95176,
-        "word": "arête"
-    },
+	lexicon:
     {
-        "id": 435366,
-        "word": "epilobium"
-    },
-    {
-        "id": 70824,
-        "word": "metaphysical"
-    },
-    {
-        "id": 88125,
-        "word": "occasioning"
-    },
-    {
-        "id": 321381,
-        "word": "rassling"
-    },
-    {
-        "id": 210326,
-        "word": "subchondral"
-    },
-    {
-        "id": 7378471,
-        "word": "unfoldable"
-    },
-    {
-        "id": 225958,
-        "word": "unreason"
-    },
-    {
-        "id": 2721289,
-        "word": "unsupplemented"
-    },
-    {
-        "id": 228290,
-        "word": "vennel"
-    },
-    {
-        "id": 478296,
-        "word": "Butte"
-    },
-    {
-        "id": 1595329,
-        "word": "Caesareans"
-    },
-    {
-        "id": 611760,
-        "word": "Keepers"
-    },
-    {
-        "id": 32729,
-        "word": "cinerary"
-    },
-    {
-        "id": 257583,
-        "word": "commentaries"
-    },
-    {
-        "id": 70326,
-        "word": "fusible"
-    },
-    {
-        "id": 3558831,
-        "word": "lysophosphatidic"
-    },
-    {
-        "id": 2579692,
-        "word": "metacommunity"
-    },
-    {
-        "id": 91193,
-        "word": "rag-tag"
-    },
-    {
-        "id": 345740,
-        "word": "tremors"
-    },
-    {
-        "id": 28358098,
-        "word": "Moreton Bay"
-    },
-    {
-        "id": 556344,
-        "word": "Mortimer"
-    },
-    {
-        "id": 10144,
-        "word": "areolar"
-    },
-    {
-        "id": 2213080,
-        "word": "dabbawalas"
-    },
-    {
-        "id": 49814,
-        "word": "diplomatically"
-    },
-    {
-        "id": 124541,
-        "word": "leakiness"
-    },
-    {
-        "id": 191036,
-        "word": "river-dolphin"
-    },
-    {
-        "id": 339957,
-        "word": "supercities"
-    },
-    {
-        "id": 76131,
-        "word": "tester"
-    },
-    {
-        "id": 343991,
-        "word": "tigerlike"
-    },
-    {
-        "id": 640893,
-        "word": "Carrick"
-    },
-    {
-        "id": 243923,
-        "word": "audiocassette"
-    },
-    {
-        "id": 32967,
-        "word": "circumnavigator"
-    },
-    {
-        "id": 50944,
-        "word": "dispart"
-    },
-    {
-        "id": 7867191,
-        "word": "multiposition"
-    },
-    {
-        "id": 75163,
-        "word": "obliged"
-    },
-    {
-        "id": 312635,
-        "word": "perishables"
-    },
-    {
-        "id": 4391840,
-        "word": "supercells"
-    },
-    {
-        "id": 220091,
-        "word": "transpositive"
-    },
-    {
-        "id": 12398588,
-        "word": "universalisability"
-    },
-    {
-        "id": 489102,
-        "word": "Youngstown"
-    },
-    {
-        "id": 1934949,
-        "word": "appropriability"
-    },
-    {
-        "id": 28615,
-        "word": "centaury"
-    },
-    {
-        "id": 254634,
-        "word": "chicer"
-    },
-    {
-        "id": 255262,
-        "word": "chronobiology"
-    },
-    {
-        "id": 292845,
-        "word": "latecomers"
-    },
-    {
-        "id": 82849,
-        "word": "soften"
-    },
-    {
-        "id": 6333711,
-        "word": "steamie"
-    },
-    {
-        "id": 1349060,
-        "word": "westie"
-    },
-    {
-        "id": 83204,
-        "word": "widening"
-    },
-    {
-        "id": 484522,
-        "word": "Navajo"
-    },
-    {
-        "id": 2428,
-        "word": "adnexed"
-    },
-    {
-        "id": 23548,
-        "word": "burthenous"
-    },
-    {
-        "id": 263373,
-        "word": "defibrillator"
-    },
-    {
-        "id": 57234,
-        "word": "enchainment"
-    },
-    {
-        "id": 84701,
-        "word": "followers"
-    },
-    {
-        "id": 287123,
-        "word": "incentives"
-    },
-    {
-        "id": 180501,
-        "word": "precocity"
-    },
-    {
-        "id": 474952,
-        "word": "two-phase"
-    },
-    {
-        "id": 89014,
-        "word": "unparliamentary"
+      en: [
+		  	{ word: "arête" },
+      	{ word: "epilobium" },
+      	{ word: "metaphysical" },
+      	{ word: "occasioning" },
+      	{ word: "rassling"
+      	},
+      	{
+      	    word: "subchondral"
+      	},
+      	{
+      	    word: "unfoldable"
+      	},
+      	{
+      	    word: "unreason"
+      	},
+      	{
+      	    word: "unsupplemented"
+      	},
+      	{
+      	    word: "vennel"
+      	},
+      	{
+      	    word: "Butte"
+      	},
+      	{
+      	    word: "Caesareans"
+      	},
+      	{
+      	    word: "Keepers"
+      	},
+      	{
+      	    word: "cinerary"
+      	},
+      	{
+      	    word: "commentaries"
+      	},
+      	{
+      	    word: "fusible"
+      	},
+      	{
+      	    word: "lysophosphatidic"
+      	},
+      	{
+      	    word: "metacommunity"
+      	},
+      	{
+      	    word: "rag-tag"
+      	},
+      	{
+      	    word: "tremors"
+      	},
+      	{
+      	    word: "Moreton Bay"
+      	},
+      	{
+      	    word: "Mortimer"
+      	},
+      	{
+      	    word: "areolar"
+      	},
+      	{
+      	    word: "dabbawalas"
+      	},
+      	{
+      	    word: "diplomatically"
+      	},
+      	{
+      	    word: "leakiness"
+      	},
+      	{
+      	    word: "river-dolphin"
+      	},
+      	{
+      	    word: "supercities"
+      	},
+      	{
+      	    word: "tester"
+      	},
+      	{
+      	    word: "tigerlike"
+      	},
+      	{
+      	    word: "Carrick"
+      	},
+      	{
+      	    word: "audiocassette"
+      	},
+      	{
+      	    word: "circumnavigator"
+      	},
+      	{
+      	    word: "dispart"
+      	},
+      	{
+      	    word: "multiposition"
+      	},
+      	{
+      	    word: "obliged"
+      	},
+      	{
+      	    word: "perishables"
+      	},
+      	{
+      	    word: "supercells"
+      	},
+      	{
+      	    word: "transpositive"
+      	},
+      	{
+      	    word: "universalisability"
+      	},
+      	{
+      	    word: "Youngstown"
+      	},
+      	{
+      	    word: "appropriability"
+      	},
+      	{
+      	    word: "centaury"
+      	},
+      	{
+      	    word: "chicer"
+      	},
+      	{
+      	    word: "chronobiology"
+      	},
+      	{
+      	    word: "latecomers"
+      	},
+      	{
+      	    word: "soften"
+      	},
+      	{
+      	    word: "steamie"
+      	},
+      	{
+      	    word: "westie"
+      	},
+      	{
+      	    word: "widening"
+      	},
+      	{
+      	    word: "Navajo"
+      	},
+      	{
+      	    word: "adnexed"
+      	},
+      	{
+      	    word: "burthenous"
+      	},
+      	{
+      	    word: "defibrillator"
+      	},
+      	{
+      	    word: "enchainment"
+      	},
+      	{
+      	    word: "followers"
+      	},
+      	{
+      	    word: "incentives"
+      	},
+      	{
+      	    word: "precocity"
+      	},
+      	{
+      	    word: "two-phase"
+      	},
+      	{
+      	    word: "unparliamentary"
+      	}
+    	],
+    	fr: [
+      	{ word: 'bleu' },
+      	{ word: 'super' },
+      	{ word: 'autre' },
+      	{ word: 'bizarre' },
+      	{ word: 'difficile' },
+      	{ word: 'drôle' },
+      	{ word: 'étrange' },
+      	{ word: 'facile' },
+      	{ word: 'grave' },
+      	{ word: 'impossible' },
+      	{ word: 'jeune' },
+      	{ word: 'juste' },
+      	{ word: 'libre' },
+      	{ word: 'malade' },
+      	{ word: 'même' },
+      	{ word: 'pauvre' },
+      	{ word: 'possible' },
+      	{ word: 'propre' },
+      	{ word: 'rouge' },
+      	{ word: 'sale' },
+      	{ word: 'simple' },
+      	{ word: 'tranquille' },
+      	{ word: 'triste' },
+      	{ word: 'vide' },
+      	{ word: 'bonne' },
+      	{ word: 'toute' },
+      	{ word: 'doux' },
+      	{ word: 'faux' },
+      	{ word: 'français' },
+      	{ word: 'gros' },
+      	{ word: 'heureux' },
+      	{ word: 'mauvais' },
+      	{ word: 'sérieux' },
+      	{ word: 'vieux' },
+      	{ word: 'vrai' },
+      	{ word: 'ancien' },
+      	{ word: 'beau' },
+      	{ word: 'blanc' },
+      	{ word: 'certain' },
+      	{ word: 'chaud' },
+      	{ word: 'cher' },
+      	{ word: 'clair' },
+      	{ word: 'content' },
+      	{ word: 'dernier' },
+      	{ word: 'désolé' },
+      	{ word: 'différent' },
+      	{ word: 'droit' },
+      	{ word: 'entier' },
+      	{ word: 'fort' },
+      	{ word: 'froid' },
+      	{ word: 'gentil' },
+      	{ word: 'grand' },
+      	{ word: 'haut' },
+      	{ word: 'humain' },
+      	{ word: 'important' },
+      	{ word: 'joli' },
+      	{ word: 'léger' },
+      	{ word: 'long' },
+      	{ word: 'meilleur' },
+      	{ word: 'mort' },
+      	{ word: 'noir' },
+      	{ word: 'nouveau' },
+      	{ word: 'pareil' },
+      	{ word: 'petit' },
+      	{ word: 'plein' },
+      	{ word: 'premier' },
+      	{ word: 'prêt' },
+      	{ word: 'prochain' },
+      	{ word: 'quoi' },
+      	{ word: 'seul' },
+      	{ word: 'tout' },
+      	{ word: 'vert' },
+      	{ word: 'vivant' },
+      	{ word: 'aide' },
+      	{ word: 'chef' },
+      	{ word: 'enfant' },
+      	{ word: 'garde' },
+      	{ word: 'gauche' },
+      	{ word: 'geste' },
+      	{ word: 'gosse' },
+      	{ word: 'livre' },
+      	{ word: 'merci' },
+      	{ word: 'mort' },
+      	{ word: 'ombre' },
+      	{ word: 'part' },
+      	{ word: 'poche' },
+      	{ word: 'professeur' },
+      	{ word: 'tour' },
+      	{ word: 'fois' },
+      	{ word: 'madame' },
+      	{ word: 'paix' },
+      	{ word: 'voix' },
+      	{ word: 'affaire' },
+      	{ word: 'année' },
+      	{ word: 'arme' },
+      	{ word: 'armée' },
+      	{ word: 'attention' },
+      	{ word: 'balle' },
+      	{ word: 'boîte' },
+      	{ word: 'bouche' },
+      	{ word: 'carte' },
+      	{ word: 'cause' },
+      	{ word: 'chambre' },
+      	{ word: 'chance' },
+      	{ word: 'chose' },
+      	{ word: 'classe' },
+      	{ word: 'confiance' },
+      	{ word: 'couleur' },
+      	{ word: 'cour' },
+      	{ word: 'cuisine' },
+      	{ word: 'dame' },
+      	{ word: 'dent' },
+      	{ word: 'droite' },
+      	{ word: 'école' },
+      	{ word: 'église' },
+      	{ word: 'envie' },
+      	{ word: 'épaule' },
+      	{ word: 'époque' },
+      	{ word: 'équipe' },
+      	{ word: 'erreur' },
+      	{ word: 'espèce' },
+      	{ word: 'face' },
+      	{ word: 'façon' },
+      	{ word: 'faim' },
+      	{ word: 'famille' },
+      	{ word: 'faute' },
+      	{ word: 'femme' },
+      	{ word: 'fenêtre' },
+      	{ word: 'fête' },
+      	{ word: 'fille' },
+      	{ word: 'fleur' },
+      	{ word: 'force' },
+      	{ word: 'forme' },
+      	{ word: 'guerre' },
+      	{ word: 'gueule' },
+      	{ word: 'habitude' },
+      	{ word: 'heure' },
+      	{ word: 'histoire' },
+      	{ word: 'idée' },
+      	{ word: 'image' },
+      	{ word: 'impression' },
+      	{ word: 'jambe' },
+      	{ word: 'joie' },
+      	{ word: 'journée' },
+      	{ word: 'langue' },
+      	{ word: 'lettre' },
+      	{ word: 'lèvre' },
+      	{ word: 'ligne' },
+      	{ word: 'lumière' },
+      	{ word: 'main' },
+      	{ word: 'maison' },
+      	{ word: 'maman' },
+      	{ word: 'manière' },
+      	{ word: 'marche' },
+      	{ word: 'merde' },
+      	{ word: 'mère' },
+      	{ word: 'minute' },
+      	{ word: 'musique' },
+      	{ word: 'nuit' },
+      	{ word: 'odeur' },
+      	{ word: 'oreille' },
+      	{ word: 'parole' },
+      	{ word: 'partie' },
+      	{ word: 'peau' },
+      	{ word: 'peine' },
+      	{ word: 'pensée' },
+      	{ word: 'personne' },
+      	{ word: 'peur' },
+      	{ word: 'photo' },
+      	{ word: 'pièce' },
+      	{ word: 'pierre' },
+      	{ word: 'place' },
+      	{ word: 'police' },
+      	{ word: 'porte' },
+      	{ word: 'présence' },
+      	{ word: 'prison' },
+      	{ word: 'putain' },
+      	{ word: 'question' },
+      	{ word: 'raison' },
+      	{ word: 'réponse' },
+      	{ word: 'robe' },
+      	{ word: 'route' },
+      	{ word: 'salle' },
+      	{ word: 'scène' },
+      	{ word: 'seconde' },
+      	{ word: 'sécurité' },
+      	{ word: 'semaine' },
+      	{ word: 'situation' },
+      	{ word: 'soeur' },
+      	{ word: 'soirée' },
+      	{ word: 'sorte' },
+      	{ word: 'suite' },
+      	{ word: 'table' },
+      	{ word: 'terre' },
+      	{ word: 'tête' },
+      	{ word: 'vérité' },
+      	{ word: 'ville' },
+      	{ word: 'voiture' },
+      	{ word: 'avis' },
+      	{ word: 'bois' },
+      	{ word: 'bras' },
+      	{ word: 'choix' },
+      	{ word: 'corps' },
+      	{ word: 'cours' },
+      	{ word: 'gars' },
+      	{ word: 'mois' },
+      	{ word: 'pays' },
+      	{ word: 'prix' },
+      	{ word: 'propos' },
+      	{ word: 'sens' },
+      	{ word: 'temps' },
+      	{ word: 'travers' },
+      	{ word: 'vieux' },
+      	{ word: 'accord' },
+      	{ word: 'agent' },
+      	{ word: 'amour' },
+      	{ word: 'appel' },
+      	{ word: 'arbre' },
+      	{ word: 'argent' },
+      	{ word: 'avenir' },
+      	{ word: 'avion' },
+      	{ word: 'bateau' },
+      	{ word: 'bébé' },
+      	{ word: 'besoin' },
+      	{ word: 'bonheur' },
+      	{ word: 'bonjour' },
+      	{ word: 'bord' },
+      	{ word: 'boulot' },
+      	{ word: 'bout' },
+      	{ word: 'bruit' },
+      	{ word: 'bureau' },
+      	{ word: 'café' },
+      	{ word: 'camp' },
+      	{ word: 'capitaine' },
+      	{ word: 'chat' },
+      	{ word: 'chemin' },
+      	{ word: 'chéri' },
+      	{ word: 'cheval' },
+      	{ word: 'cheveu' },
+      	{ word: 'chien' },
+      	{ word: 'ciel' },
+      	{ word: 'client' },
+      	{ word: 'c&oelig;ur' },
+      	{ word: 'coin' },
+      	{ word: 'colonel' },
+      	{ word: 'compte' },
+      	{ word: 'copain' },
+      	{ word: 'côté' },
+      	{ word: 'coup' },
+      	{ word: 'courant' },
+      	{ word: 'début' },
+      	{ word: 'départ' },
+      	{ word: 'dieu' },
+      	{ word: 'docteur' },
+      	{ word: 'doigt' },
+      	{ word: 'dollar' },
+      	{ word: 'doute' },
+      	{ word: 'droit' },
+      	{ word: 'effet' },
+      	{ word: 'endroit' },
+      	{ word: 'ennemi' },
+      	{ word: 'escalier' },
+      	{ word: 'esprit' },
+      	{ word: 'état' },
+      	{ word: 'être' },
+      	{ word: 'exemple' },
+      	{ word: 'fait' },
+      	{ word: 'film' },
+      	{ word: 'flic' },
+      	{ word: 'fond' },
+      	{ word: 'français' },
+      	{ word: 'frère' },
+      	{ word: 'front' },
+      	{ word: 'garçon' },
+      	{ word: 'général' },
+      	{ word: 'genre' },
+      	{ word: 'goût' },
+      	{ word: 'gouvernement' },
+      	{ word: 'grand' },
+      	{ word: 'groupe' },
+      	{ word: 'haut' },
+      	{ word: 'homme' },
+      	{ word: 'honneur' },
+      	{ word: 'hôtel' },
+      	{ word: 'instant' },
+      	{ word: 'intérêt' },
+      	{ word: 'intérieur' },
+      	{ word: 'jardin' },
+      	{ word: 'jour' },
+      	{ word: 'journal' },
+      	{ word: 'lieu' },
+      	{ word: 'long' },
+      	{ word: 'maître' },
+      	{ word: 'mari' },
+      	{ word: 'mariage' },
+      	{ word: 'matin' },
+      	{ word: 'médecin' },
+      	{ word: 'mètre' },
+      	{ word: 'milieu' },
+      	{ word: 'million' },
+      	{ word: 'moment' },
+      	{ word: 'monde' },
+      	{ word: 'monsieur' },
+      	{ word: 'mouvement' },
+      	{ word: 'moyen' },
+      	{ word: 'noir' },
+      	{ word: 'nouveau' },
+      	{ word: 'numéro' },
+      	{ word: 'oeil' },
+      	{ word: 'oiseau' },
+      	{ word: 'oncle' },
+      	{ word: 'ordre' },
+      	{ word: 'papa' },
+      	{ word: 'papier' },
+      	{ word: 'parent' },
+      	{ word: 'passage' },
+      	{ word: 'passé' },
+      	{ word: 'patron' },
+      	{ word: 'père' },
+      	{ word: 'petit' },
+      	{ word: 'peuple' },
+      	{ word: 'pied' },
+      	{ word: 'plaisir' },
+      	{ word: 'plan' },
+      	{ word: 'point' },
+      	{ word: 'pouvoir' },
+      	{ word: 'premier' },
+      	{ word: 'présent' },
+      	{ word: 'président' },
+      	{ word: 'prince' },
+      	{ word: 'problème' },
+      	{ word: 'quartier' },
+      	{ word: 'rapport' },
+      	{ word: 'regard' },
+      	{ word: 'reste' },
+      	{ word: 'retard' },
+      	{ word: 'retour' },
+      	{ word: 'rêve' },
+      	{ word: 'revoir' },
+      	{ word: 'salut' },
+      	{ word: 'sang' },
+      	{ word: 'secret' },
+      	{ word: 'seigneur' },
+      	{ word: 'sentiment' },
+      	{ word: 'service' },
+      	{ word: 'seul' },
+      	{ word: 'siècle' },
+      	{ word: 'signe' },
+      	{ word: 'silence' },
+      	{ word: 'soir' },
+      	{ word: 'soldat' },
+      	{ word: 'soleil' },
+      	{ word: 'sourire' },
+      	{ word: 'souvenir' },
+      	{ word: 'sujet' },
+      	{ word: 'téléphone' },
+      	{ word: 'tout' },
+      	{ word: 'train' },
+      	{ word: 'travail' },
+      	{ word: 'trou' },
+      	{ word: 'truc' },
+      	{ word: 'type' },
+      	{ word: 'vent' },
+      	{ word: 'ventre' },
+      	{ word: 'verre' },
+      	{ word: 'village' },
+      	{ word: 'visage' },
+      	{ word: 'voyage' },
+      	{ word: 'fils' },
+      	{ word: 'gens' },
+      	{ word: 'abandonner' },
+      	{ word: 'accepter' },
+      	{ word: 'accompagner' },
+      	{ word: 'acheter' },
+      	{ word: 'adorer' },
+      	{ word: 'agir' },
+      	{ word: 'aider' },
+      	{ word: 'aimer' },
+      	{ word: 'ajouter' },
+      	{ word: 'aller' },
+      	{ word: 'amener' },
+      	{ word: 'amuser' },
+      	{ word: 'annoncer' },
+      	{ word: 'apercevoir' },
+      	{ word: 'apparaître' },
+      	{ word: 'appeler' },
+      	{ word: 'apporter' },
+      	{ word: 'apprendre' },
+      	{ word: 'approcher' },
+      	{ word: 'arranger' },
+      	{ word: 'arrêter' },
+      	{ word: 'arriver' },
+      	{ word: 'asseoir' },
+      	{ word: 'assurer' },
+      	{ word: 'attaquer' },
+      	{ word: 'atteindre' },
+      	{ word: 'attendre' },
+      	{ word: 'avancer' },
+      	{ word: 'avoir' },
+      	{ word: 'baisser' },
+      	{ word: 'battre' },
+      	{ word: 'boire' },
+      	{ word: 'bouger' },
+      	{ word: 'brûler' },
+      	{ word: 'cacher' },
+      	{ word: 'calmer' },
+      	{ word: 'casser' },
+      	{ word: 'cesser' },
+      	{ word: 'changer' },
+      	{ word: 'chanter' },
+      	{ word: 'charger' },
+      	{ word: 'chercher' },
+      	{ word: 'choisir' },
+      	{ word: 'commencer' },
+      	{ word: 'comprendre' },
+      	{ word: 'compter' },
+      	{ word: 'conduire' },
+      	{ word: 'connaître' },
+      	{ word: 'continuer' },
+      	{ word: 'coucher' },
+      	{ word: 'couper' },
+      	{ word: 'courir' },
+      	{ word: 'couvrir' },
+      	{ word: 'craindre' },
+      	{ word: 'crier' },
+      	{ word: 'croire' },
+      	{ word: 'danser' },
+      	{ word: 'décider' },
+      	{ word: 'découvrir' },
+      	{ word: 'dégager' },
+      	{ word: 'demander' },
+      	{ word: 'descendre' },
+      	{ word: 'désoler' },
+      	{ word: 'détester' },
+      	{ word: 'détruire' },
+      	{ word: 'devenir' },
+      	{ word: 'deviner' },
+      	{ word: 'devoir' },
+      	{ word: 'dire' },
+      	{ word: 'disparaître' },
+      	{ word: 'donner' },
+      	{ word: 'dormir' },
+      	{ word: 'échapper' },
+      	{ word: 'écouter' },
+      	{ word: 'écrire' },
+      	{ word: 'éloigner' },
+      	{ word: 'embrasser' },
+      	{ word: 'emmener' },
+      	{ word: 'empêcher' },
+      	{ word: 'emporter' },
+      	{ word: 'enlever' },
+      	{ word: 'entendre' },
+      	{ word: 'entrer' },
+      	{ word: 'envoyer' },
+      	{ word: 'espérer' },
+      	{ word: 'essayer' },
+      	{ word: 'être' },
+      	{ word: 'éviter' },
+      	{ word: 'excuser' },
+      	{ word: 'exister' },
+      	{ word: 'expliquer' },
+      	{ word: 'faire' },
+      	{ word: 'falloir' },
+      	{ word: 'fermer' },
+      	{ word: 'filer' },
+      	{ word: 'finir' },
+      	{ word: 'foutre' },
+      	{ word: 'frapper' },
+      	{ word: 'gagner' },
+      	{ word: 'garder' },
+      	{ word: 'glisser' },
+      	{ word: 'habiter' },
+      	{ word: 'ignorer' },
+      	{ word: 'imaginer' },
+      	{ word: 'importer' },
+      	{ word: 'inquiéter' },
+      	{ word: 'installer' },
+      	{ word: 'intéresser' },
+      	{ word: 'inviter' },
+      	{ word: 'jeter' },
+      	{ word: 'jouer' },
+      	{ word: 'jurer' },
+      	{ word: 'lâcher' },
+      	{ word: 'laisser' },
+      	{ word: 'lancer' },
+      	{ word: 'lever' },
+      	{ word: 'lire' },
+      	{ word: 'maintenir' },
+      	{ word: 'manger' },
+      	{ word: 'manquer' },
+      	{ word: 'marcher' },
+      	{ word: 'marier' },
+      	{ word: 'mener' },
+      	{ word: 'mentir' },
+      	{ word: 'mettre' },
+      	{ word: 'monter' },
+      	{ word: 'montrer' },
+      	{ word: 'mourir' },
+      	{ word: 'naître' },
+      	{ word: 'obliger' },
+      	{ word: 'occuper' },
+      	{ word: 'offrir' },
+      	{ word: 'oser' },
+      	{ word: 'oublier' },
+      	{ word: 'ouvrir' },
+      	{ word: 'paraître' },
+      	{ word: 'parler' },
+      	{ word: 'partir' },
+      	{ word: 'passer' },
+      	{ word: 'payer' },
+      	{ word: 'penser' },
+      	{ word: 'perdre' },
+      	{ word: 'permettre' },
+      	{ word: 'plaire' },
+      	{ word: 'pleurer' },
+      	{ word: 'porter' },
+      	{ word: 'poser' },
+      	{ word: 'pousser' },
+      	{ word: 'pouvoir' },
+      	{ word: 'préférer' },
+      	{ word: 'prendre' },
+      	{ word: 'préparer' },
+      	{ word: 'présenter' },
+      	{ word: 'prévenir' },
+      	{ word: 'prier' },
+      	{ word: 'promettre' },
+      	{ word: 'proposer' },
+      	{ word: 'protéger' },
+      	{ word: 'quitter' },
+      	{ word: 'raconter' },
+      	{ word: 'ramener' },
+      	{ word: 'rappeler' },
+      	{ word: 'recevoir' },
+      	{ word: 'reconnaître' },
+      	{ word: 'réfléchir' },
+      	{ word: 'refuser' },
+      	{ word: 'regarder' },
+      	{ word: 'rejoindre' },
+      	{ word: 'remarquer' },
+      	{ word: 'remettre' },
+      	{ word: 'remonter' },
+      	{ word: 'rencontrer' },
+      	{ word: 'rendre' },
+      	{ word: 'rentrer' },
+      	{ word: 'répéter' },
+      	{ word: 'répondre' },
+      	{ word: 'reposer' },
+      	{ word: 'reprendre' },
+      	{ word: 'ressembler' },
+      	{ word: 'rester' },
+      	{ word: 'retenir' },
+      	{ word: 'retirer' },
+      	{ word: 'retourner' },
+      	{ word: 'retrouver' },
+      	{ word: 'réussir' },
+      	{ word: 'réveiller' },
+      	{ word: 'revenir' },
+      	{ word: 'rêver' },
+      	{ word: 'revoir' },
+      	{ word: 'rire' },
+      	{ word: 'risquer' },
+      	{ word: 'rouler' },
+      	{ word: 'sauter' },
+      	{ word: 'sauver' },
+      	{ word: 'savoir' },
+      	{ word: 'sembler' },
+      	{ word: 'sentir' },
+      	{ word: 'séparer' },
+      	{ word: 'serrer' },
+      	{ word: 'servir' },
+      	{ word: 'sortir' },
+      	{ word: 'souffrir' },
+      	{ word: 'sourire' },
+      	{ word: 'souvenir' },
+      	{ word: 'suffire' },
+      	{ word: 'suivre' },
+      	{ word: 'taire' },
+      	{ word: 'tendre' },
+      	{ word: 'tenir' },
+      	{ word: 'tenter' },
+      	{ word: 'terminer' },
+      	{ word: 'tirer' },
+      	{ word: 'tomber' },
+      	{ word: 'toucher' },
+      	{ word: 'tourner' },
+      	{ word: 'traîner' },
+      	{ word: 'traiter' },
+      	{ word: 'travailler' },
+      	{ word: 'traverser' },
+      	{ word: 'tromper' },
+      	{ word: 'trouver' },
+      	{ word: 'tuer' },
+      	{ word: 'utiliser' },
+      	{ word: 'valoir' },
+      	{ word: 'vendre' },
+      	{ word: 'venir' },
+      	{ word: 'vivre' },
+      	{ word: 'voir' },
+      	{ word: 'voler' },
+      	{ word: 'vouloir' }
+    	]
     }
-	]
 }
 
 module.exports = Configuration;
