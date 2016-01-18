@@ -5,8 +5,10 @@ let Configuration = {
 	lexicon:
 		{
 			en: [
-				{ word: 'lorem' },
-				{ word: 'ipsum' }
+				{ word: 'loremipsum' },
+				{ word: 'dolor' },
+				{ word: 'sitamet' },
+				{ word: 'consectetuer' }
 			]
 		}
 }
