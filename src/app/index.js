@@ -3,8 +3,8 @@
 import Utils from '../infra/utils';
 
 import React from 'react';
-import Card from './card';
-import Scoreboard from './scoreboard';
+import Card from '../card';
+import Scoreboard from '../scoreboard';
 import styles from './index.scss';
 
 class App extends React.Component {

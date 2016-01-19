@@ -1,6 +1,6 @@
 'use strict';
 
-jest.dontMock('../src/app/scoreboard/index');
+jest.dontMock('../src/scoreboard/index');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -9,7 +9,7 @@ import Utils from '../src/infra/utils';
 
 /* This is a bug in babel-jest that forces using require */
 /* https://github.com/babel/babel-jest/issues/22 */
-const Scoreboard = require('../src/app/scoreboard/index');
+const Scoreboard = require('../src/scoreboard/index');
 
 describe('Scoreboard', () => {
 
