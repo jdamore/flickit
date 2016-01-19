@@ -1,7 +1,7 @@
 'use strict';
 
 jest.dontMock('../src/infra/utils');
-jest.dontMock('../src/app/card/index');
+jest.dontMock('../src/card/index');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -9,8 +9,8 @@ import ReactTestUtils from 'react-addons-test-utils';
 
 /* This is a bug in babel-jest that forces using require */
 /* https://github.com/babel/babel-jest/issues/22 */
-const Card = require('../src/app/card/index');
-const Styles = require('../src/app/card/index.scss');
+const Card = require('../src/card/index');
+const Styles = require('../src/card/index.scss');
 
 Styles.container = 'container';
 Styles.flipped = 'flipped';
