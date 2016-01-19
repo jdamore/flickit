@@ -22,10 +22,7 @@ describe('App', () => {
 		let deck, cards;
 
 		beforeEach(function() {
-			let AppTest = class extends App {
-      	componentWillMount() { }
-      };
-			app = ReactTestUtils.renderIntoDocument(<AppTest numCards={numCards}/>);
+			app = ReactTestUtils.renderIntoDocument(<App numCards={numCards}/>);
 			appNode = ReactDOM.findDOMNode(app);
 			deck = ReactTestUtils.findRenderedDOMComponentWithTag(app, 'ul');
 			cards = deck.children;
