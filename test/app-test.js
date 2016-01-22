@@ -1,15 +1,12 @@
 'use strict';
 
-jest.dontMock('../src/app/index');
-
+import { expect } from 'chai';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils';
 import Utils from '../src/infra/utils';
 
-/* This is a bug in babel-jest that forces using require */
-/* https://github.com/babel/babel-jest/issues/22 */
-const App = require('../src/app/index');
+import App from '../src/app/index';
 
 describe('App', () => {
 
@@ -29,12 +26,12 @@ describe('App', () => {
 		});
 
   	it('renders a deck of cards', () => {
-  		expect(deck).not.toBeUndefined();
-  		expect(deck).not.toBeNull();
+  		expect(deck).not.to.be.undefined;
+  		expect(deck).not.to.be.null;
 		});
 
   	it('renders the expected number of cards', () => {
-  		expect(cards.length).toBe(numCards);
+  		expect(cards.length).to.equal(numCards);
 		});
 
 	});

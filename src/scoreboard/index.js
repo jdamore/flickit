@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from './index.scss';
 
-class Scoreboard extends React.Component {
+export default class Scoreboard extends React.Component {
 
   constructor() {
     super();
@@ -20,6 +20,4 @@ class Scoreboard extends React.Component {
     );
   }
 }
-
-module.exports = Scoreboard;
 
