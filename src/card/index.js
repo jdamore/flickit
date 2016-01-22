@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from './index.scss';
 
-class Card extends React.Component {
+export default class Card extends React.Component {
 
   constructor() {
     super();
@@ -66,6 +66,4 @@ class Card extends React.Component {
   }
 
 }
-
-module.exports = Card;
 

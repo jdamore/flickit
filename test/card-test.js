@@ -1,16 +1,12 @@
 'use strict';
 
-jest.dontMock('../src/infra/utils');
-jest.dontMock('../src/card/index');
-
+import { expect } from 'chai';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils';
 
-/* This is a bug in babel-jest that forces using require */
-/* https://github.com/babel/babel-jest/issues/22 */
-const Card = require('../src/card/index');
-const Styles = require('../src/card/index.scss');
+import Card from '../src/card/index';
+import Styles from '../src/card/index.scss';
 
 Styles.container = 'container';
 Styles.flipped = 'flipped';
@@ -35,7 +31,7 @@ describe('Card', () => {
 
   	it('returns a new word', () => {
   			let word = card.state.word;
-  			expect(card.newWord()).not.toEqual(word);
+  			expect(card.newWord()).not.to.equal(word);
 		});
 
 	});
@@ -43,13 +39,13 @@ describe('Card', () => {
 	describe('score', () => {
 
   	it('returns 5 for the flipit word', () => {
-  			expect(card.score()).toEqual(5);
+  			expect(card.score()).to.equal(5);
 		});
 
   	it('returns the computed score for the current word', () => {
   			card.setState({word:'test'});
   			let testScore = card.score();
-  			expect(testScore).not.toEqual(0);
+  			expect(testScore).not.to.equal(0);
 		});
 
   	it('returns different computed scores for different words', () => {
@@ -57,7 +53,7 @@ describe('Card', () => {
   			let testScore = card.score();
   			card.setState({word:'testAgain'});
   			let testAgainScore = card.score();
-  			expect(testAgainScore).not.toEqual(testScore);
+  			expect(testAgainScore).not.to.equal(testScore);
 		});
 
 	});
@@ -65,27 +61,27 @@ describe('Card', () => {
 	describe('render', () => {
 
   	it('renders the card', () => {
-  			expect(cardNode.tagName).toEqual('DIV');
+  			expect(cardNode.tagName).to.equal('DIV');
 		});
 	
   	it('renders the front', () => {
-  			expect(cardFrontNode.tagName).toEqual('SPAN');
+  			expect(cardFrontNode.tagName).to.equal('SPAN');
 		});
 	
   	it('renders the back', () => {
-  			expect(cardBackNode.tagName).toEqual('SPAN');
+  			expect(cardBackNode.tagName).to.equal('SPAN');
 		});
 	
   	it('renders the card with the correct name', () => {
-  			expect(cardNode.getAttribute('name')).toEqual('card');
+  			expect(cardNode.getAttribute('name')).to.equal('card');
 		});
 	
   	it('renders the front with the correct name', () => {
-  			expect(cardFrontNode.getAttribute('name')).toEqual('card-front');
+  			expect(cardFrontNode.getAttribute('name')).to.equal('card-front');
 		});
 	
   	it('renders the back with the correct name', () => {
-  			expect(cardBackNode.getAttribute('name')).toEqual('card-back');
+  			expect(cardBackNode.getAttribute('name')).to.equal('card-back');
 		});
 
 	});
@@ -99,15 +95,15 @@ describe('Card', () => {
 			});
 		
   		it('flips the card', () => {
-  				expect(cardNode.getAttribute('class')).toContain('flipped');
+  				expect(cardNode.getAttribute('class')).to.contain('flipped');
 			});
 		
   		it('flips the front', () => {
-  				expect(cardFrontNode.getAttribute('class')).toContain('flipped');
+  				expect(cardFrontNode.getAttribute('class')).to.contain('flipped');
 			});
 		
   		it('flips the back', () => {
-  				expect(cardBackNode.getAttribute('class')).toContain('flipped');
+  				expect(cardBackNode.getAttribute('class')).to.contain('flipped');
 			});
 
   		});
@@ -123,20 +119,20 @@ describe('Card', () => {
 			});
 		
   		it('unflips the card', () => {
-  			expect(cardNode.getAttribute('class')).not.toContain('flipped');
+  			expect(cardNode.getAttribute('class')).not.to.contain('flipped');
 			});
 		
   		it('unflips the front', () => {
-  			expect(cardFrontNode.getAttribute('class')).not.toContain('flipped');
+  			expect(cardFrontNode.getAttribute('class')).not.to.contain('flipped');
 			});
 		
   		it('unflips the back', () => {
-  			expect(cardBackNode.getAttribute('class')).not.toContain('flipped');
+  			expect(cardBackNode.getAttribute('class')).not.to.contain('flipped');
 			});
 		
   		it('shows a new word', () => {
 				let newWord = cardFrontNode.innerHTML;
-  			expect(newWord).not.toEqual(word);
+  			expect(newWord).not.to.equal(word);
 			});
 
   		});

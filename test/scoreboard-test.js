@@ -1,15 +1,12 @@
 'use strict';
 
-jest.dontMock('../src/scoreboard/index');
-
+import { expect } from 'chai';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils';
 import Utils from '../src/infra/utils';
 
-/* This is a bug in babel-jest that forces using require */
-/* https://github.com/babel/babel-jest/issues/22 */
-const Scoreboard = require('../src/scoreboard/index');
+import Scoreboard from '../src/scoreboard/index';
 
 describe('Scoreboard', () => {
 
@@ -29,15 +26,15 @@ describe('Scoreboard', () => {
 		});
 
   	it('renders the score label', () => {
-  		expect(scoreLabel).not.toBeUndefined();
+  		expect(scoreLabel).not.to.be.undefined;
 		});
 
   	it('renders the score value', () => {
-  		expect(scoreValue.textContent).toBe('0');
+  		expect(scoreValue.textContent).to.equal('0');
 		});
 
   	it('a default score value of 0', () => {
-  		expect(scoreValue.textContent).toBe('0');
+  		expect(scoreValue.textContent).to.equal('0');
 		});
 
   });
