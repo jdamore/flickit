@@ -14,7 +14,6 @@
   "homepage": "https://github.com/jdamore/flickit#readme",
   "main": "index.js",
   "scripts": {
-    "tests": "jest --verbose",
     "test": "./node_modules/.bin/mocha --reporter nyan --compilers js:babel-core/register,css:test/nocss-compiler.js --require test/dom.js --require babel-polyfill test/**/*test.js",
     "watch": "webpack --watch",
     "build": "webpack -p --progress --colors --config webpack.prod.config.js",
