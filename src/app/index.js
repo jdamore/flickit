@@ -20,7 +20,8 @@ class App extends React.Component {
 		}
     return (
       <div className={styles.container}>
-        <ul id='deck' className={styles.deck}>{cards}</ul>;
+        <Scoreboard/>
+        <ul id='deck' className={styles.deck}>{cards}</ul>
       </div>
     );
 	}

@@ -2,6 +2,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import Stream from '../infra/stream';
+import { addScore } from '../infra/events';
 import styles from './index.scss';
 
 export default class Card extends React.Component {
@@ -16,6 +19,7 @@ export default class Card extends React.Component {
     this.flipCard       = this._flipCard.bind(this);
     this.flipState      = this._flipState.bind(this);
     this.score          = this._score.bind(this);
+    this.stream         = Stream();
   }
  
   render() {
@@ -36,6 +40,9 @@ export default class Card extends React.Component {
   _onClick() {
     this.flipCard();
     this.flipState();
+    if(this.state.side==='front') {
+      this.stream.add(addScore(this.score(), this.state.word));
+    }
   }
 
   _flipState() {
