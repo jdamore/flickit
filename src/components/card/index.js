@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 
 import Stream from '../../infra/stream';
 import { addScore } from '../../infra/events';
+
 import styles from './index.scss';
 
 export default class Card extends React.Component {
