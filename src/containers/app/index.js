@@ -1,10 +1,10 @@
 'use strict';
 
-import Utils from '../infra/utils';
+import Utils from '../../infra/utils';
 
 import React from 'react';
-import Card from '../card';
-import Scoreboard from '../scoreboard';
+import Card from '../../components/card';
+import Scoreboard from '../../components/scoreboard';
 import styles from './index.scss';
 
 class App extends React.Component {

@@ -2,7 +2,7 @@
 
 import { expect } from 'chai';
 
-import { addScore, ADD_SCORE } from '../src/infra/events';
+import { addScore, ADD_SCORE } from '../../src/infra/events';
 
 describe('Actions', () => {
 

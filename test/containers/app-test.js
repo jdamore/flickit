@@ -4,9 +4,9 @@ import { expect } from 'chai';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils';
-import Utils from '../src/infra/utils';
+import Utils from '../../src/infra/utils';
 
-import App from '../src/app/index';
+import App from '../../src/containers/app/index';
 
 describe('App', () => {
 
