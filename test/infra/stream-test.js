@@ -8,7 +8,7 @@ Chai.use(ChaiSpies);
 let expect = Chai.expect;
 let should = Chai.should;
 
-import { Stream } from '../src/infra/stream';
+import { Stream } from '../../src/infra/stream';
 
 describe('Stream', () => {
 

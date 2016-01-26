@@ -1,3 +1,5 @@
+'use strict';
+
 export const ADD_SCORE = 'ADD_SCORE';
 
 export function addScore(score, word) {

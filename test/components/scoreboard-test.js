@@ -4,9 +4,9 @@ import { expect } from 'chai';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils';
-import Utils from '../src/infra/utils';
+import Utils from '../../src/infra/utils';
 
-import Scoreboard from '../src/scoreboard/index';
+import Scoreboard from '../../src/components/scoreboard/index';
 
 describe('Scoreboard', () => {
 
