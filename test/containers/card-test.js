@@ -5,8 +5,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils';
 
-import Card from '../../src/components/card/index';
-import Styles from '../../src/components/card/index.scss';
+import Card from '../../src/containers/card/index';
+import Styles from '../../src/containers/card/index.scss';
 
 Styles.container = 'container';
 Styles.flipped = 'flipped';
@@ -16,15 +16,15 @@ Styles.back = 'back';
 describe('Card', () => {
 
 	let card;
-	let cardNode, cardFrontNode, cardBackNode;
+	let cardNode, wordNode, scoreNode;
 	let lexicon = [{word:'word1'}, {word:'word2'}, {word:'word3'}, {word:'word4'}]
 
 	beforeEach(function() {
 		card = ReactTestUtils.renderIntoDocument(<Card lexicon={lexicon}/>);
 		cardNode = ReactDOM.findDOMNode(card);
-		let cardChildren = ReactTestUtils.scryRenderedDOMComponentsWithTag(card, 'span');
-		cardFrontNode = Array.find(cardChildren, n => n.getAttribute('name') === 'card-front');
-		cardBackNode = Array.find(cardChildren, n => n.getAttribute('name') === 'card-back');
+		let cardChildren = ReactTestUtils.scryRenderedDOMComponentsWithTag(card, 'div');
+		wordNode = Array.find(cardChildren, n => n.getAttribute('name') === 'word');
+		scoreNode = Array.find(cardChildren, n => n.getAttribute('name') === 'score');
 	});
 
 	describe('newWord', () => {
@@ -61,27 +61,15 @@ describe('Card', () => {
 	describe('render', () => {
 
   	it('renders the card', () => {
-  			expect(cardNode.tagName).to.equal('DIV');
-		});
-	
-  	it('renders the front', () => {
-  			expect(cardFrontNode.tagName).to.equal('SPAN');
-		});
-	
-  	it('renders the back', () => {
-  			expect(cardBackNode.tagName).to.equal('SPAN');
-		});
-	
-  	it('renders the card with the correct name', () => {
   			expect(cardNode.getAttribute('name')).to.equal('card');
 		});
 	
-  	it('renders the front with the correct name', () => {
-  			expect(cardFrontNode.getAttribute('name')).to.equal('card-front');
+  	it('renders the word', () => {
+  			expect(wordNode.getAttribute('name')).to.equal('word');
 		});
 	
-  	it('renders the back with the correct name', () => {
-  			expect(cardBackNode.getAttribute('name')).to.equal('card-back');
+  	it('renders the score', () => {
+  			expect(scoreNode.getAttribute('name')).to.equal('score');
 		});
 
 	});
@@ -98,12 +86,12 @@ describe('Card', () => {
   				expect(cardNode.getAttribute('class')).to.contain('flipped');
 			});
 		
-  		it('flips the front', () => {
-  				expect(cardFrontNode.getAttribute('class')).to.contain('flipped');
+  		it('flips the word', () => {
+  				expect(wordNode.getAttribute('class')).to.contain('flipped');
 			});
 		
-  		it('flips the back', () => {
-  				expect(cardBackNode.getAttribute('class')).to.contain('flipped');
+  		it('flips the score', () => {
+  				expect(scoreNode.getAttribute('class')).to.contain('flipped');
 			});
 
   		});
@@ -113,7 +101,7 @@ describe('Card', () => {
 			let word;
 
 			beforeEach(function() {
-				word = cardFrontNode.innerHTML;
+				word = wordNode.innerHTML;
 				card.onClick();
 				card.onClick();
 			});
@@ -123,15 +111,15 @@ describe('Card', () => {
 			});
 		
   		it('unflips the front', () => {
-  			expect(cardFrontNode.getAttribute('class')).not.to.contain('flipped');
+  			expect(wordNode.getAttribute('class')).not.to.contain('flipped');
 			});
 		
   		it('unflips the back', () => {
-  			expect(cardBackNode.getAttribute('class')).not.to.contain('flipped');
+  			expect(scoreNode.getAttribute('class')).not.to.contain('flipped');
 			});
 		
   		it('shows a new word', () => {
-				let newWord = cardFrontNode.innerHTML;
+				let newWord = wordNode.innerHTML;
   			expect(newWord).not.to.equal(word);
 			});
 

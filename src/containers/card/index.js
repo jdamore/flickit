@@ -6,6 +6,8 @@ import ReactDOM from 'react-dom';
 import Stream from '../../infra/stream';
 import { addScore } from '../../infra/events';
 
+import Player from '../../components/player';
+
 import styles from './index.scss';
 
 export default class Card extends React.Component {
@@ -26,8 +28,11 @@ export default class Card extends React.Component {
   render() {
     return (
       <div name='card' id={'card-'+this.props.id} className={styles.container} onClick={this.onClick} >
-        <span name='card-front' id={'card-'+this.props.id+'-front'} className={styles.front}>{this.state.word}</span>
-        <span name='card-back' id={'card-'+this.props.id+'-back'} className={styles.back}>{this.score()}</span>
+        <div name='word' id={'card-'+this.props.id+'-word'} className={styles.front}>
+          <div name='written' className={styles.word}>{this.state.word}</div>
+          <div name='player' className={styles.player}><Player streamUrl={'https://soundcloud.com/jean-damore/'+this.state.word} clientId='0269ff1c8dbf9a24d542e90d80689a0c'/></div>
+        </div>
+        <div name='score' id={'card-'+this.props.id+'-score'} className={styles.back}>{this.score()}</div>
       </div>
     );
   }
@@ -57,8 +62,8 @@ export default class Card extends React.Component {
 
   _flipCard() {
     this.cardNode().classList.toggle(styles.flipped);
-    this.cardChildNode('front').classList.toggle(styles.flipped);
-    this.cardChildNode('back').classList.toggle(styles.flipped);
+    this.cardChildNode('word').classList.toggle(styles.flipped);
+    this.cardChildNode('score').classList.toggle(styles.flipped);
   }
 
   _score() {

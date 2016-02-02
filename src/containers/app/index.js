@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import Card from '../../components/card';
+import Card from '../../containers/card';
 import Scoreboard from '../../components/scoreboard';
 import Utils from '../../infra/utils';
 
