@@ -26,8 +26,8 @@ export default class Card extends React.Component {
   render() {
     return (
       <div name='card' id={'card-'+this.props.id} className={styles.container} onClick={this.onClick} >
-        <span name='card-front' id={'card-'+this.props.id+'-front'} className={styles.front}>{this.state.word}</span>
-        <span name='card-back' id={'card-'+this.props.id+'-back'} className={styles.back}>{this.score()}</span>
+        <span name='word' id={'card-'+this.props.id+'-word'} className={styles.front}>{this.state.word}</span>
+        <span name='score' id={'card-'+this.props.id+'-score'} className={styles.back}>{this.score()}</span>
       </div>
     );
   }
@@ -57,8 +57,8 @@ export default class Card extends React.Component {
 
   _flipCard() {
     this.cardNode().classList.toggle(styles.flipped);
-    this.cardChildNode('front').classList.toggle(styles.flipped);
-    this.cardChildNode('back').classList.toggle(styles.flipped);
+    this.cardChildNode('word').classList.toggle(styles.flipped);
+    this.cardChildNode('score').classList.toggle(styles.flipped);
   }
 
   _score() {

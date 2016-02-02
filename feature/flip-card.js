@@ -19,7 +19,7 @@ test.before(function() {
 describe('Flip Card', function() {
 
   it('shows the card score', function () {
-    driver.findElement(webdriver.By.name('card-back')).getText().then(function(text) {
+    driver.findElement(webdriver.By.name('score')).getText().then(function(text) {
       assert.equal(text, '5', "Card showing '" + text + "'' instead of the expected score of 5");
     });
   });
