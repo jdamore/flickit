@@ -22,7 +22,7 @@ describe('Card', () => {
 	beforeEach(function() {
 		card = ReactTestUtils.renderIntoDocument(<Card lexicon={lexicon}/>);
 		cardNode = ReactDOM.findDOMNode(card);
-		let cardChildren = ReactTestUtils.scryRenderedDOMComponentsWithTag(card, 'span');
+		let cardChildren = ReactTestUtils.scryRenderedDOMComponentsWithTag(card, 'div');
 		wordNode = Array.find(cardChildren, n => n.getAttribute('name') === 'word');
 		scoreNode = Array.find(cardChildren, n => n.getAttribute('name') === 'score');
 	});
