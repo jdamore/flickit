@@ -32,18 +32,10 @@ test.describe('Display Card', function() {
 
   test.it('shows the player', function () {
     driver.get(config.url);
-    driver.findElement(webdriver.By.name('player')).getText().then(function(text) {
-      assert.equal(text, 'Play', "Player nt present");
+    driver.findElement(webdriver.By.name('player')).then(function(player) {
+      assert.notEqual(undefined, player.findElement(webdriver.By.tagName('button')));
     });
   });
-
-  // test.it('shows no JS error', function () {
-  //   driver.manage().timeouts().setScriptTimeout(5000, 1) 
-  //   promise = driver.executeAsyncScript("return window.jsErrors");
-  //   promise.then(function(returnValue) {
-  //     assert.equal(0, returnValue.length, "Found JS errors " + errors);
-  //   });
-  // });
 
 });
 
