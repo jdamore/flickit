@@ -13,7 +13,7 @@ test.before(function() {
   driver.get(config.url);
   this.timeout(mochaTimeOut);
   driver.wait(until.elementLocated(webdriver.By.name('card')), 2000);
-  driver.findElement(webdriver.By.name('card')).click();
+  driver.findElement(webdriver.By.name('written')).click();
 });
  
 describe('Flip Card', function() {

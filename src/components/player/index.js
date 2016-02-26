@@ -1,8 +1,8 @@
 import React from 'react';
 import { SoundPlayerContainer } from 'react-soundplayer/addons';
+import { PlayButton, Timer, Progress, Icons } from 'react-soundplayer/components';
 
-// const clientId = 'YOUR CLIENT ID';
-// const resolveUrl = 'https://soundcloud.com/stepan-i-meduza-official/dolgo-obyasnyat';
+import styles from './index.scss';
 
 class CustomPlayer extends React.Component {
 
@@ -16,19 +16,10 @@ class CustomPlayer extends React.Component {
     }
 
     render() {
-
-        let { track, playing } = this.props;
-
-        if (!track) {
-            return <div>Loading...</div>;
-        }
+        let { track, currentTime, duration } = this.props;
 
         return (
-            <div>
-                <button onClick={this.play.bind(this)}>
-                    {playing ? 'Pause' : 'Play'}
-                </button>
-            </div>
+            <PlayButton {...this.props} />
         );
     }
 }

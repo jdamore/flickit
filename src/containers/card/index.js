@@ -27,12 +27,12 @@ export default class Card extends React.Component {
  
   render() {
     return (
-      <div name='card' id={'card-'+this.props.id} className={styles.container} onClick={this.onClick} >
+      <div name='card' id={'card-'+this.props.id} className={styles.container}>
         <div name='word' id={'card-'+this.props.id+'-word'} className={styles.front}>
-          <div name='written' className={styles.word}>{this.state.word}</div>
+          <div name='written' className={styles.word} onClick={this.onClick} >{this.state.word}</div>
           <div name='player' className={styles.player}><Player streamUrl={'https://soundcloud.com/jean-damore/'+this.state.word} clientId='0269ff1c8dbf9a24d542e90d80689a0c'/></div>
         </div>
-        <div name='score' id={'card-'+this.props.id+'-score'} className={styles.back}>{this.score()}</div>
+        <div name='score' id={'card-'+this.props.id+'-score'} className={styles.back} onClick={this.onClick} >{this.score()}</div>
       </div>
     );
   }
