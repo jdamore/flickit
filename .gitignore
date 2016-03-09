@@ -7,4 +7,7 @@ node_modules
 npm-debug.log
 DomElement_Attributes.js
 DomElement_Functions.js
+pact-mock-service-*
+pacts/**/*.json
+pacts/**/*.log
 *.log

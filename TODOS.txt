@@ -1,0 +1,11 @@
+TODOs
+
+- Use service in card/index.js ->> change unit tests
+- Unit tetss for HttpClient and WordServiceClient
+- Remove config
+- Change configuration to no use JS
+- Re-write feature tests for ES6
+- Remove karma as it us not used for contracts
+- Properties Vs state
+- Shorten card container
+- Refactor index-m.css and index-d.css to only have deltas
