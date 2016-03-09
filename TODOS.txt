@@ -9,3 +9,4 @@ TODOs
 - Properties Vs state
 - Shorten card container
 - Refactor index-m.css and index-d.css to only have deltas
+- Replace NODE_ENV=test by NODE_ENV=ci
