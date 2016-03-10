@@ -16,28 +16,27 @@ setup() {
 	fi
 }
 
+download() {
+	if [ ! -d $1 ]; then
+		echo "Will download https://github.com/bethesque/pact-mock_service/releases/download/v0.7.2/$1.tar.gz"
+	  curl -LO https://github.com/bethesque/pact-mock_service/releases/download/v0.7.2/$1.tar.gz
+		tar xzf $1.tar.gz
+		rm -f $1.tar.gz
+	fi
+}
+
 start() 
 {
 	echo 'Downloading Pact Mock Service...'
 
 	if [ "$NODE_ENV" == "test" ]; then
-		if [ ! -d pact-mock-service-0.7.2-1-linux-x86_64 ]; then
-	  	curl -LO https://github.com/bethesque/pact-mock_service/releases/download/v0.7.2/pact-mock-service-0.7.2-1-linux-x86_64.tar.gz
-			tar xzf pact-mock-service-0.7.2-1-linux-x86_64.tar.gz
-			rm -f pact-mock-service-0.7.2-1-linux-x86_64.tar.gz
-		fi
+		download pact-mock-service-0.7.2-1-linux-x86_64
 		pushd pact-mock-service-0.7.2-1-linux-x86_64/bin
 	else
-		if [ ! -d pact-mock-service-0.7.2-1-osx ]; then
-			curl -LO https://github.com/bethesque/pact-mock_service/releases/download/v0.7.2/pact-mock-service-0.7.2-1-osx.tar.gz
-			tar xzf pact-mock-service-0.7.2-1-osx.tar.gz
-			rm -f pact-mock-service-0.7.2-1-osx.tar.gz
-		fi
+		download pact-mock-service-0.7.2-1-osx
 		pushd pact-mock-service-0.7.2-1-osx/bin
 	fi
-
 	echo 'Pact Mock Service Downloaded'
-
 
 	echo "Starting Pact Mock Service in $(pwd) for $(uname -a)..."
 	./pact-mock-service -p 1234 --pact-specification-version 2.0.0 -l $SCRIPT_DIR/pacts/pacts.log --pact-dir $SCRIPT_DIR/pacts &
