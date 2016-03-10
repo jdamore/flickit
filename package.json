@@ -19,7 +19,9 @@
     "build": "webpack -p --progress --colors --config webpack.prod.config.js",
     "dev": "webpack-dev-server --progress --colors --port 8090",
     "start": "npm run watch | npm run dev",
-    "feature": "node_modules/.bin/mocha feature"
+    "feature": "node_modules/.bin/mocha feature",
+    "pact-mock-service": "./pact-mock-service.sh",
+    "pacts": "./node_modules/.bin/mocha --compilers js:babel-core/register,css:test/nocss-compiler.js --require babel-polyfill pacts"
   },
   "babel": {
     "presets": [
@@ -45,9 +47,11 @@
   "dependencies": {
     "babel-polyfill": "^6.3.14",
     "config": "^1.17.1",
+    "karma-cli": "^0.1.2",
     "react": "^0.14.4",
     "react-dom": "^0.14.4",
-    "react-soundplayer": "^0.3.1"
+    "react-soundplayer": "^0.3.1",
+    "request": "^2.69.0"
   },
   "devDependencies": {
     "babel-core": "^6.1.2",
@@ -60,10 +64,13 @@
     "css-loader": "^0.22.0",
     "file-loader": "^0.8.4",
     "http-server": "^0.8.5",
+    "jasmine-core": "^2.4.1",
     "jsdom": "^7.2.2",
     "mocha": "^2.3.4",
     "node-sass": "^3.4.1",
+    "pact-consumer-js-dsl": "^0.2.1",
     "proxyquire": "^1.7.3",
+    "randomstring": "^1.1.4",
     "react-addons-test-utils": "^0.14.4",
     "react-tools": "^0.13.3",
     "sass-loader": "^3.1.1",
