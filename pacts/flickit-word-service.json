@@ -7,27 +7,8 @@
   },
   "interactions": [
     {
-      "description": "a request for a word",
-      "provider_state": "there is a problem with the service",
-      "request": {
-        "method": "get",
-        "path": "/word",
-        "headers": {
-          "Accept": "application/json"
-        }
-      },
-      "response": {
-        "status": 500,
-        "headers": {
-          "Content-Type": "application/json"
-        },
-        "body": {
-        }
-      }
-    },
-    {
-      "description": "a request for a word",
-      "provider_state": "the service is healthy",
+      "description": "a request for a random word",
+      "provider_state": "the service is up and running",
       "request": {
         "method": "get",
         "path": "/word",
@@ -41,7 +22,7 @@
           "Content-Type": "application/json"
         },
         "body": {
-          "word": "BfMjwkhTYlQI",
+          "word": "jBNaQOJZMCJj",
           "score": 12
         },
         "matchingRules": {
