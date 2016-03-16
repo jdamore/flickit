@@ -96,9 +96,9 @@ describe('Word Service Client Contract', () => {
     	expect(responseWord.word).to.equal(randomString);
     });
   
-    it('returns a score', () => {
-    	expect(responseWord.score).to.equal(12);
-    });
+    // it('returns a score', () => {
+    // 	expect(responseWord.score).to.equal(12);
+    // });
 
   });
 
