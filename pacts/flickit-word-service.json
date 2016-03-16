@@ -1,0 +1,59 @@
+{
+  "consumer": {
+    "name": "flickit"
+  },
+  "provider": {
+    "name": "word-service"
+  },
+  "interactions": [
+    {
+      "description": "a request for a word",
+      "provider_state": "there is a problem with the service",
+      "request": {
+        "method": "get",
+        "path": "/word",
+        "headers": {
+          "Accept": "application/json"
+        }
+      },
+      "response": {
+        "status": 500,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+        }
+      }
+    },
+    {
+      "description": "a request for a word",
+      "provider_state": "the service is healthy",
+      "request": {
+        "method": "get",
+        "path": "/word",
+        "headers": {
+          "Accept": "application/json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "word": "BfMjwkhTYlQI",
+          "score": 12
+        },
+        "matchingRules": {
+          "$.body.word": {
+            "match": "regex",
+            "regex": "\\w+"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecificationVersion": "2.0.0"
+  }
+}
