@@ -4,9 +4,9 @@ import React from 'react';
 import ReactDom from 'react-dom';
 
 import Configuration from 'configuration';
-import Card from './card';
+import App from './containers/app';
 
 ReactDom.render(
-	<Card front={'benevole'} back={12} />,
+	<App numCards="4" lexicon={Configuration.lexicon.en}/>,
 	document.getElementById('app')
 );
