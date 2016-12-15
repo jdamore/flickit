@@ -11,34 +11,28 @@
   &:local(.flipped) {
     transform: rotateY(180deg);
     transition: 0.8s;
-    transform-style: preserve-3d;
-  }
-
-  :local(.front), :local(.back) {
   }
 
   :local(.front) {
-    display: block;
-    z-index: 1;
-    &:local(.flipped) {
+    &:local(.shown) {
+      display: block;
+    }
+    &:local(.hidden) {
       display: none;
     }
   }
 
   :local(.back) {
-    display: none;
-    z-index: 2;
-    transform: rotateY(180deg);
-    
-    &:local(.flipped) {
+    &:local(.hidden) {
+      display: none;
+    }
+    &:local(.shown) {
       display: block;
+      transform: rotateY(180deg);
     } 
 
   }
 
-  .flipped-hidden {
-    display: none;
-  }
 }
 
 $screen-sm-min: 768px;

@@ -19,10 +19,7 @@
     "build": "webpack -p --progress --colors --config webpack.prod.config.js",
     "dev": "webpack-dev-server --progress --colors --port 8090",
     "start": "npm run watch | npm run dev",
-    "feature": "node_modules/.bin/mocha feature",
-    "pact-mock-service": "./pact-mock-service.sh",
-    "pacts": "./node_modules/.bin/mocha --compilers js:babel-core/register,css:test/nocss-compiler.js --require babel-polyfill pacts",
-    "pacts-full": "npm run pact-mock-service start && npm run pacts && npm run pact-mock-service stop"
+    "feature": "node_modules/.bin/mocha feature"
   },
   "babel": {
     "presets": [

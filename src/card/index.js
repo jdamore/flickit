@@ -17,9 +17,9 @@ export default class Card extends React.Component {
  
   render() {
     return (
-      <div name='card' className={ styles.container + ' ' + (this.state.flipped ? styles.flipped : '')} onClick={this.flip.bind(this)}>
-        <div is up='true' name='front' class={styles.front + ' ' + (this.state.flipped ? styles.flipped : '')}> {this.props.front} </div>
-        <div is up='false' name='back' class={styles.back + ' ' + (this.state.flipped ? styles.flipped : '')}> {this.props.back} </div>
+      <div name='card' className={styles.container + ' ' + (this.state.flipped ? styles.flipped : '')} onClick={this.flip.bind(this)}>
+        <div name='front' className={styles.front + ' ' + (this.state.flipped ? styles.hidden : styles.shown)}> {this.props.front} </div>
+        <div name='back' className={styles.back + ' ' + (!this.state.flipped ? styles.hidden : styles.shown)}> {this.props.back} </div>
       </div>
     );
   }
