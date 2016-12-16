@@ -5,84 +5,34 @@ let Configuration = {
 	lexicon:
     {
       en: [
-		  	{ word: "arête" },
       	{ word: "epilobium" },
       	{ word: "metaphysical" },
       	{ word: "occasioning" },
-      	{ word: "rassling"
-      	},
-      	{
-      	    word: "subchondral"
-      	},
-      	{
-      	    word: "unfoldable"
-      	},
-      	{
-      	    word: "unreason"
-      	},
-      	{
-      	    word: "unsupplemented"
-      	},
-      	{
-      	    word: "vennel"
-      	},
-      	{
-      	    word: "Butte"
-      	},
-      	{
-      	    word: "Caesareans"
-      	},
-      	{
-      	    word: "Keepers"
-      	},
-      	{
-      	    word: "cinerary"
-      	},
-      	{
-      	    word: "commentaries"
-      	},
-      	{
-      	    word: "fusible"
-      	},
-      	{
-      	    word: "lysophosphatidic"
-      	},
-      	{
-      	    word: "metacommunity"
-      	},
-      	{
-      	    word: "rag-tag"
-      	},
-      	{
-      	    word: "tremors"
-      	},
-      	{
-      	    word: "Moreton Bay"
-      	},
-      	{
-      	    word: "Mortimer"
-      	},
-      	{
-      	    word: "areolar"
-      	},
-      	{
-      	    word: "dabbawalas"
-      	},
-      	{
-      	    word: "diplomatically"
-      	},
-      	{
-      	    word: "leakiness"
-      	},
-      	{
-      	    word: "river-dolphin"
-      	},
-      	{
-      	    word: "supercities"
-      	},
-      	{
-      	    word: "tester"
-      	},
+      	{ word: "rassling" },
+      	{ word: "subchondral" },
+      	{ word: "unfoldable" },
+      	{ word: "unreason" },
+      	{ word: "unsupplemented" },
+      	{ word: "vennel" },
+      	{ word: "Butte" },
+      	{ word: "Caesareans" },
+      	{ word: "Keepers" },
+      	{ word: "cinerary" },
+      	{ word: "commentaries" },
+      	{ word: "fusible" },
+      	{ word: "lysophosphatidic" },
+      	{ word: "metacommunity" },
+      	{ word: "rag-tag" },
+      	{ word: "tremors" },
+      	{ word: "Moreton Bay" },
+      	{ word: "Mortimer" },
+      	{ word: "areolar" },
+      	{ word: "dabbawalas" },
+      	{ word: "diplomatically" },
+      	{ word: "leakiness" },
+      	{ word: "river-dolphin" },
+      	{ word: "supercities" },
+      	{ word: "tester" },
       	{
       	    word: "tigerlike"
       	},
@@ -170,11 +120,9 @@ let Configuration = {
       	{
       	    word: "precocity"
       	},
-      	{
-      	    word: "two-phase"
+      	{ word: "two-phase"
       	},
-      	{
-      	    word: "unparliamentary"
+      	{ word: "unparliamentary"
       	}
     	],
     	fr: [
