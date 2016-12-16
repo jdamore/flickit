@@ -26,8 +26,8 @@ describe('Card', () => {
 		card = ReactTestUtils.renderIntoDocument(<Card front={word} back={score}/>);
 		cardNode = ReactDOM.findDOMNode(card);
 		let cardChildren = ReactTestUtils.scryRenderedDOMComponentsWithTag(card, 'div');
-		frontNode = Array.find(cardChildren, n => n.getAttribute('name') === 'front');
-		backNode = Array.find(cardChildren, n => n.getAttribute('name') === 'back');
+		frontNode = Array.find(cardChildren, n => n.getAttribute('id') === 'front');
+		backNode = Array.find(cardChildren, n => n.getAttribute('id') === 'back');
 	});
 
 	describe('render', () => {
