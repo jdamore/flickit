@@ -17,14 +17,14 @@ test.describe('Display Card', function() {
   this.timeout(mochaTimeOut);
 
   test.it('shows the card', function () {
-    driver.get(config.url);
+    driver.get(config.url+'?lexicon=lo');
     driver.isElementPresent(webdriver.By.name('card')).then(function(present) {
       assert.equal(present, true, "Card not displayed");
     });
   });
 
   test.it('shows the expected word', function () {
-    driver.get(config.url);
+    driver.get(config.url+'?lexicon=lo');
     driver.findElement(webdriver.By.name('front')).getText().then(function(text) {
       assert.equal(text, 'loremipsum', "Card showing '" + text + "'' instead of the expected 'loremipsum'");
     });
