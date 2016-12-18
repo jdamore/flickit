@@ -23,11 +23,11 @@ describe('Card', () => {
 	let score = 12;
 
 	beforeEach(function() {
-		card = ReactTestUtils.renderIntoDocument(<Card front={word} back={score}/>);
+		card = ReactTestUtils.renderIntoDocument(<Card word={word} score={score}/>);
 		cardNode = ReactDOM.findDOMNode(card);
-		let cardChildren = ReactTestUtils.scryRenderedDOMComponentsWithTag(card, 'div');
-		frontNode = Array.find(cardChildren, n => n.getAttribute('id') === 'front');
-		backNode = Array.find(cardChildren, n => n.getAttribute('id') === 'back');
+		let cardChildren = ReactTestUtils.scryRenderedDOMComponentsWithTag(card, 'span');
+		frontNode = Array.find(cardChildren, n => n.getAttribute('id') === 'front-'+word);
+		backNode = Array.find(cardChildren, n => n.getAttribute('id') === 'back-'+word);
 	});
 
 	describe('render', () => {
@@ -44,7 +44,7 @@ describe('Card', () => {
   		expect(backNode).to.not.be.undefined;
 		});
 	
-  	it('shows the frton', () => {
+  	it('shows the front', () => {
   		expect(frontNode.getAttribute('class')).to.contain('shown');
   	});
 	

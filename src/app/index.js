@@ -15,11 +15,11 @@ export default class App extends React.Component {
 	render() {
 		let cards = [];
 		for (var i = 0; i < this.props.lexicon.length; i++) {
-  			cards.push(<div style={{zIndex:i}} className={styles.card}><Card front={this.props.lexicon[i].word} back={12} /></div>);
+  			cards.push(<div id={'card-container-'+this.props.lexicon[i].word} name='card-container' style={{zIndex:i}} className={styles.card}><Card word={this.props.lexicon[i].word} score={12} /></div>);
 		}
     return (
-      <div id='app' className={styles.container}>
-        <div id='deck' className={styles.deck}>{cards}</div>
+      <div id='app' name='app' className={styles.container}>
+        <div id='deck' name='deck' className={styles.deck}>{cards}</div>
       </div>
     );
 	}
