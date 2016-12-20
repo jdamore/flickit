@@ -1,25 +1,31 @@
 @import '../index.scss';
 
-:local(.container) {
-
-  background: #999999;
-  border: 1px solid black;
+:local(.card) {
+  
   text-align: center;
   font-family: sans-serif;
-  font-size: 7vw;
-  height: 100%;
+  // width: 100%;
+  // height: 0;
 
-  &:local(.flipped) {
-    transform: rotateY(180deg);
+  &:local(.drawn) {
+    transform: rotate(360deg) rotateY(180deg);
     transition: 0.8s;
   }
 
-  :local(.front), :local(.back) {
+  &:local(.flipped) {
+    transform: translate(0px,0px);
+    transition: 0.8s;
+  }
+
+  :local(.back), :local(.word), :local(.score) {
     display: inline-block;
     vertical-align: middle;
   }
 
-  :local(.front) {
+  :local(.back) {
+    background-image: url("card_back.jpg");
+    background-size: cover;
+    padding-bottom: 130%;
     &:local(.shown) {
       display: block;
     }
@@ -28,13 +34,25 @@
     }
   }
 
-  :local(.back) {
+  :local(.word) {
+    background: #aaaaaa;
+    &:local(.shown) {
+      display: block;
+      transform: rotateY(180deg);
+    }
+    &:local(.hidden) {
+      display: none;
+    }
+  }
+
+  :local(.score) {
+    background: #aaaaaa;
     &:local(.hidden) {
       display: none;
     }
     &:local(.shown) {
       display: block;
-      transform: rotateY(180deg);
+      transform: rotateY(360deg);
     } 
 
   }
@@ -42,19 +60,35 @@
 }
 
 @media (max-width: $screen-xs-max) {
-  :local(.container) {
-    font-size: 12vw;
-    :local(.front), :local(.back) {
-      line-height: 80vh;
+  :local(.card) {
+    :local(.back), :local(.word), :local(.score) {
+      border: 2px solid white;
+      border-radius: 10px;
+      // line-height: 40vh;
+      // font-size: 7vw;
+    }
+    :local(.back) {
+      padding-bottom: 130%;
+    }
+    :local(.word), :local(.score) {
+      padding-bottom: 120%;
     }
   }
 }
 
 @media (min-width: $screen-sm-min) {
-  :local(.container) {
-    font-size: 7vw;
-    :local(.front), :local(.back) {
-      line-height: 40vh;
+  :local(.card) {
+    :local(.back), :local(.word), :local(.score) {
+      border: 2px solid white;
+      border-radius: 10px;
+      // line-height: 3vh;
+      // font-size: 1vw;
+    }
+    :local(.back) {
+      padding-bottom: 130%;
+    }
+    :local(.word), :local(.score) {
+      padding-bottom: 117%;
     }
   }
 }

@@ -23,10 +23,22 @@ test.describe('Display Card', function() {
     });
   });
 
-  test.it('shows the expected word', function () {
+  test.it('shows the expected word when drawn', function () {
     driver.get(config.url+'?lexicon=lo');
-    driver.findElement(webdriver.By.name('front')).getText().then(function(text) {
-      assert.equal(text, 'loremipsum', "Card showing '" + text + "'' instead of the expected 'loremipsum'");
+    var card = driver.findElement(webdriver.By.id('card-loremipsum'));
+    card.click();
+    driver.findElement(webdriver.By.id('word-loremipsum')).getText().then(function(word) {
+      assert.equal(word, 'loremipsum', "Card showing '" + word + "'' instead of the expected word 'loremipsum'");
+    });
+  });
+
+  test.it('shows the expected score when flipped', function () {
+    driver.get(config.url+'?lexicon=lo');
+    var card = driver.findElement(webdriver.By.id('card-loremipsum'));
+    card.click();
+    card.click();
+    driver.findElement(webdriver.By.id('score-loremipsum')).getText().then(function(score) {
+      assert.equal(score, '12', "Card showing '" + score + "'' instead of the expected score '12'");
     });
   });
 

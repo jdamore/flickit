@@ -8,18 +8,27 @@ export default class Card extends React.Component {
 
   constructor() {
     super();
-    this.state = { flipped: false };
+    this.state = { value: 'init' };
   }
 
-  flip() {
-    this.setState({ flipped: !this.state.flipped });
+  click() {
+    if(this.state.value==='init') {
+      this.setState({ value: 'drawn' });
+    }
+    else if(this.state.value==='drawn') {
+      this.setState({ value: 'flipped' });
+    }
+    else if(this.state.value==='flipped') {
+      this.setState({ value: 'init' });
+    }
   }
  
   render() {
     return (
-      <div id={'card-'+this.props.word} name='card' className={styles.container + ' ' + (this.state.flipped ? styles.flipped : '')} onClick={this.flip.bind(this)}>
-        <span id={'front-'+this.props.word} name='front' className={styles.front + ' ' + (this.state.flipped ? styles.hidden : styles.shown)}> {this.props.word} </span>
-        <span id={'back-'+this.props.word} name='back' className={styles.back + ' ' + (!this.state.flipped ? styles.hidden : styles.shown)}> {this.props.score} </span>
+      <div id={'card-'+this.props.word} name='card' className={styles.card + ' ' + styles[this.state.value]} onClick={this.click.bind(this)}>
+        <span id={'back-'+this.props.word} name='back' className={styles.back + ' ' + (this.state.value==='init' ? styles.shown : styles.hidden)}></span>
+        <span id={'word-'+this.props.word} name='word' className={styles.word + ' ' + (this.state.value==='drawn' ? styles.shown : styles.hidden)}> {this.props.word} </span>
+        <span id={'score-'+this.props.word} name='score' className={styles.score + ' ' + (this.state.value==='flipped' ? styles.shown : styles.hidden)}> {this.props.score} </span>
       </div>
     );
   }

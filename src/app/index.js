@@ -15,7 +15,11 @@ export default class App extends React.Component {
 	render() {
 		let cards = [];
 		for (var i = 0; i < this.props.lexicon.length; i++) {
-  			cards.push(<div id={'card-container-'+this.props.lexicon[i].word} name='card-container' style={{zIndex:i}} className={styles.card}><Card word={this.props.lexicon[i]} score={12} /></div>);
+  			cards.push(
+          <div id={'card-container-'+this.props.lexicon[i]} name='card-container' style={{zIndex:i}} className={styles.card + ' ' + (i===0?styles.firstcard:'')}>
+            <Card word={this.props.lexicon[i]} score={12} />
+          </div>
+        );
 		}
     return (
       <div id='app' name='app' className={styles.container}>
