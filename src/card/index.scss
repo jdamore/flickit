@@ -4,8 +4,11 @@
   
   text-align: center;
   font-family: sans-serif;
-  // width: 100%;
-  // height: 0;
+  height: 100%;
+
+  &:local(.init) {
+    transform: translate(0px,0px); // this is just to not have an empty style
+  }
 
   &:local(.drawn) {
     transform: rotate(360deg) rotateY(180deg);
@@ -18,14 +21,14 @@
   }
 
   :local(.back), :local(.word), :local(.score) {
-    display: inline-block;
-    vertical-align: middle;
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 100%;
   }
 
   :local(.back) {
     background-image: url("card_back.jpg");
     background-size: cover;
-    padding-bottom: 130%;
     &:local(.shown) {
       display: block;
     }
@@ -62,16 +65,10 @@
 @media (max-width: $screen-xs-max) {
   :local(.card) {
     :local(.back), :local(.word), :local(.score) {
-      border: 2px solid white;
-      border-radius: 10px;
-      // line-height: 40vh;
-      // font-size: 7vw;
     }
     :local(.back) {
-      padding-bottom: 130%;
     }
     :local(.word), :local(.score) {
-      padding-bottom: 120%;
     }
   }
 }
@@ -79,16 +76,10 @@
 @media (min-width: $screen-sm-min) {
   :local(.card) {
     :local(.back), :local(.word), :local(.score) {
-      border: 2px solid white;
-      border-radius: 10px;
-      // line-height: 3vh;
-      // font-size: 1vw;
     }
     :local(.back) {
-      padding-bottom: 130%;
     }
     :local(.word), :local(.score) {
-      padding-bottom: 117%;
     }
   }
 }
