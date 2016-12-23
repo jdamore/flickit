@@ -25,19 +25,19 @@ test.describe('Display Card', function() {
 
   test.it('shows the expected word when drawn', function () {
     driver.get(config.url+'?lexicon=lo');
-    var card = driver.findElement(webdriver.By.id('card-loremipsum'));
+    var card = driver.findElement(webdriver.By.id('card-consectetuer'));
     card.click();
-    driver.findElement(webdriver.By.id('word-loremipsum')).getText().then(function(word) {
-      assert.equal(word, 'loremipsum', "Card showing '" + word + "'' instead of the expected word 'loremipsum'");
+    driver.findElement(webdriver.By.id('word-consectetuer')).getText().then(function(word) {
+      assert.equal(word, 'consectetuer', "Card showing '" + word + "'' instead of the expected word 'consectetuer'");
     });
   });
 
   test.it('shows the expected score when flipped', function () {
     driver.get(config.url+'?lexicon=lo');
-    var card = driver.findElement(webdriver.By.id('card-loremipsum'));
+    var card = driver.findElement(webdriver.By.id('card-consectetuer'));
     card.click();
     card.click();
-    driver.findElement(webdriver.By.id('score-loremipsum')).getText().then(function(score) {
+    driver.findElement(webdriver.By.id('score-consectetuer')).getText().then(function(score) {
       assert.equal(score, '12', "Card showing '" + score + "'' instead of the expected score '12'");
     });
   });

@@ -10,20 +10,24 @@ export default class App extends React.Component {
 
   constructor() {
     super();
+    this.cards = [];
+  }
+
+  click() {
+    console.log('click');
   }
 
 	render() {
-		let cards = [];
 		for (var i = 0; i < this.props.lexicon.length; i++) {
-  			cards.push(
-          <div id={'card-container-'+this.props.lexicon[i]} name='card-container' style={{zIndex:i}} className={styles.card + ' ' + (i===0?styles.firstcard:'')}>
+  			this.cards.push(
+          <div id={'card-container-'+this.props.lexicon[i]} name='card-container' style={{zIndex:i}} className={styles.card + ' ' + (i===0?styles.firstcard:'')} >
             <Card word={this.props.lexicon[i]} score={12} />
           </div>
         );
 		}
     return (
       <div id='app' name='app' className={styles.container}>
-        <div id='deck' name='deck' className={styles.deck}>{cards}</div>
+        <div id='deck' name='deck' className={styles.deck}>{this.cards}</div>
       </div>
     );
 	}

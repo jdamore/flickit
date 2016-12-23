@@ -7,7 +7,7 @@
   height: 100%;
 
   &:local(.init) {
-    transform: translate(0px,0px); // this is just to not have an empty style
+    width: auto; // this is just to not have an empty style
   }
 
   &:local(.drawn) {
