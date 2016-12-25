@@ -1,5 +1,4 @@
 rm -f bundle.js
-#rm -rf node_modules
 kill -9 `ps aux | grep webpack-dev-server | grep 8090 | awk '{print $2}'`
 nvm use 5.0
 npm install
