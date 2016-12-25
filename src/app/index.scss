@@ -23,6 +23,8 @@ body {
 			height: 60vw;
     	margin-bottom: -58vw;
     	margin-left: 20vw;
+    	line-height: 55vw;
+    	text-align: center;
 			transform: translate(-20vw,0);
     	transition: 0.7s;
 			&:hover {
@@ -49,10 +51,12 @@ body {
 			height: 22vw;
     	margin-left: -14vw;
     	margin-top: 20vh;
-			transform: translate(0px,-20vh);
+    	line-height: 20vw;
+    	text-align: center;
+			transform: translate(0,-20vh);
     	transition: 0.7s;
 			&:hover {
-				transform: translate(0px,20vh);
+				transform: translate(0,20vh);
     		transition: 0.7s;
 			}
 		}
