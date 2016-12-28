@@ -1,59 +1,59 @@
 @import '../index.scss';
 
-:local(.card) {
+.card {
   
   font-family: sans-serif;
   font-size: calc(3vw + 3vh);
   height: 100%;
 
-  &:local(.init) {
-    width: auto; // this is just to not have an empty style
+  &.init {
+    width: auto;
   }
 
-  &:local(.drawn) {
+  &.drawn {
     transform: rotate(360deg) rotateY(180deg);
     transition: 0.8s;
   }
 
-  &:local(.flipped) {
+  &.flipped {
     transform: translate(0px,0px);
     transition: 0.8s;
   }
 
-  :local(.back), :local(.word), :local(.score) {
+  .back, .word, .score {
     border: 2px solid white;
     border-radius: 10px;
     height: 100%;
   }
 
-  :local(.back) {
-    background-image: url("card_back.jpg");
+  .back {
+    background-image: url("../../images/card_back.jpg");
     background-size: cover;
-    &:local(.shown) {
+    &.shown {
       display: block;
     }
-    &:local(.hidden) {
+    &.hidden {
       display: none;
     }
   }
 
-  :local(.word) {
+  .word {
     background: #aaaaaa;
-    &:local(.shown) {
+    &.shown {
       display: block;
       transform: rotateY(180deg);
     }
-    &:local(.hidden) {
+    &.hidden {
       display: none;
     }
   }
 
-  :local(.score) {
+  .score {
     background: #aaaaaa;
-    &:local(.hidden) {
+    &.hidden {
       display: none;
     }
-    &:local(.shown) {
+    &.shown {
       display: block;
       transform: rotateY(360deg);
     } 
@@ -63,13 +63,13 @@
 }
 
 @media (max-width: $screen-xs-max) {
-  :local(.card) {
+  .card {
     font-size: calc(3vw + 3vh);
   }
 }
 
 @media (min-width: $screen-sm-min) {
-  :local(.card) {
+  .card {
     font-size: calc(1.5vw + 1.5vh);
   }
 }

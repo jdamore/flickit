@@ -16,7 +16,7 @@
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter nyan --compilers js:babel-core/register,css:test/nocss-compiler.js --require test/dom.js --require babel-polyfill test/**/*-test.js",
     "watch": "webpack --watch",
-    "build": "webpack -p --progress --colors --config webpack.prod.config.js",
+    "build": "webpack -p --progress --colors --config webpack.config.js",
     "dev": "webpack-dev-server --progress --colors --port 8090",
     "start": "npm run watch | npm run dev",
     "feature": "node_modules/.bin/mocha feature"
@@ -60,6 +60,7 @@
     "chai": "^3.4.1",
     "chai-spies": "^0.7.1",
     "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.4",
     "http-server": "^0.8.5",
     "jasmine-core": "^2.4.1",
@@ -71,6 +72,7 @@
     "sass-loader": "^3.1.1",
     "selenium-webdriver": "^2.48.2",
     "style-loader": "^0.13.1",
+    "watch-ignore-webpack-plugin": "^1.0.0",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   }
