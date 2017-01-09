@@ -1,0 +1,21 @@
+@import '../index.scss';
+
+.scoreboard {
+  color: white;
+  font-family: sans-serif;
+  padding: 0 5px 10px 5px;
+  text-align: center;
+}
+
+
+@media (max-width: $screen-xs-max) {
+  .scoreboard {
+  	font-size: calc(6vw + 6vh);
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .scoreboard {
+  	font-size: calc(4vw + 4vh);
+  }
+}

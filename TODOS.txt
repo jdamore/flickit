@@ -4,3 +4,4 @@ Kids friendly style
 Add killdev to package.json
 Rationalise states for a card
 Drag & drop
+Use Sass varibale for font

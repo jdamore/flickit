@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Card from '../card';
+import Scoreboard from '../scoreboard';
 import styles from './index.scss';
 
 export default class App extends React.Component {
@@ -27,6 +28,7 @@ export default class App extends React.Component {
 		}
     return (
       <div id='app' name='app' className={styles.container}>
+        <Scoreboard score='100' />
         <div id='deck' name='deck' className={styles.deck}>{this.cards}</div>
       </div>
     );
