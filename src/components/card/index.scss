@@ -63,10 +63,17 @@
 @media (max-width: $screen-xs-max) {
   .card {
     .word {
+      line-height: 55vw;
       font-size: calc(3vw + 3vh);
     }
     .score {
-      font-size: calc(6vw + 6vh);
+      .big {
+        line-height: 45vw;
+        font-size: calc(8vw + 8vh);
+      }
+      .small {
+        font-size: calc(2vw + 2vh);
+      }
     }
   }
 }
@@ -74,10 +81,17 @@
 @media (min-width: $screen-sm-min) {
   .card {
     .word {
+      line-height: 20vw;
       font-size: calc(1.5vw + 1.5vh);
     }
     .score {
-      font-size: calc(3vw + 3vh);
+      .big {
+        line-height: 15vw;
+        font-size: calc(6vw + 6vh);
+      }
+      .small {
+        font-size: calc(1vw + 1vh);
+      }
     }
   }
 }

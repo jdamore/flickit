@@ -27,8 +27,8 @@ export default class Card extends React.Component {
         <span id={'back-'+this.props.word} name='back' className={styles.back + ' ' + (this.state.value==='init' ? styles.shown : styles.hidden)}></span>
         <span id={'word-'+this.props.word} name='word' className={styles.word + ' ' + (this.state.value==='drawn' ? styles.shown : styles.hidden)}> {this.props.word} </span>
         <span id={'score-'+this.props.word} name='score' className={styles.score + ' ' + (this.state.value==='flipped' ? styles.shown : styles.hidden)}> 
-          <p>{this.props.word}</p>
-          <p>{this.props.score}</p> 
+           <div className={styles.big}>{this.props.score}</div> 
+           <div className={styles.small}>{this.props.word}</div>
         </span>
       </div>
     )
