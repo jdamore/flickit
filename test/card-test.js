@@ -116,7 +116,7 @@ describe('Card', () => {
 	});
 
 
-	describe('third click', () => {
+	describe('subsequent click', () => {
 
 		beforeEach(function() {
 			card.click();
@@ -124,20 +124,12 @@ describe('Card', () => {
 			card.click();
 		});
 	
-  	it('shows the back', () => {
-  		expect(backSide.getAttribute('class')).to.contain('shown');
+  	it('keeps the score shown', () => {
+  		expect(scoreSide.getAttribute('class')).to.contain('shown');
 		});
 	
-  	it('hides the word', () => {
-  		expect(wordSide.getAttribute('class')).to.contain('hidden');
-		});
-	
-  	it('hides the score', () => {
-  		expect(scoreSide.getAttribute('class')).to.contain('hidden');
-		});
-	
-  	it('changes the card state to init', () => {
-  		expect(card.state.value).to.equal('init');
+  	it('keeps the card state to flipped', () => {
+  		expect(card.state.value).to.equal('flipped');
   	});
 
 	});

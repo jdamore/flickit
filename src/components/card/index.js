@@ -19,9 +19,6 @@ export default class Card extends React.Component {
       this.setState({ value: 'flipped' })
       this.props.onScorePoints(this.props.score)
     }
-    else if(this.state.value==='flipped') {
-      this.setState({ value: 'init' })
-    }
   }
  
   render() {
