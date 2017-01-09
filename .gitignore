@@ -1,7 +1,7 @@
 .DS_Store
 **/*.tmp.js
 *.log
-bundle.js
+bundle.js*
 DomElement_Attributes.js
 DomElement_Functions.js
 images
@@ -11,4 +11,4 @@ pact-mock-service-*
 pacts/**/*.log
 public
 scratch
-style.css
+style.css*

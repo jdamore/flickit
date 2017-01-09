@@ -1,8 +1,7 @@
-'use strict';
+'use strict'
 
 export default [
-
-				'bleu',
+		'bleu',
       	'super',
       	'autre',
       	'bizarre',
@@ -602,5 +601,4 @@ export default [
       	'voir',
       	'voler',
       	'vouloir'
-      	
-];
+]

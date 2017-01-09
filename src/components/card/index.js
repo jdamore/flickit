@@ -1,25 +1,26 @@
-'use strict';
+'use strict'
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import styles from './index.scss';
+import React, { PropTypes } from 'react'
+import ReactDOM from 'react-dom'
+import styles from './index.scss'
 
 export default class Card extends React.Component {
 
   constructor() {
-    super();
-    this.state = { value: 'init' };
+    super()
+    this.state = { value: 'init' }
   }
 
   click() {
     if(this.state.value==='init') {
-      this.setState({ value: 'drawn' });
+      this.setState({ value: 'drawn' })
     }
     else if(this.state.value==='drawn') {
-      this.setState({ value: 'flipped' });
+      this.setState({ value: 'flipped' })
+      this.props.onScorePoints(this.props.score)
     }
     else if(this.state.value==='flipped') {
-      this.setState({ value: 'init' });
+      this.setState({ value: 'init' })
     }
   }
  
@@ -30,10 +31,18 @@ export default class Card extends React.Component {
         <span id={'word-'+this.props.word} name='word' className={styles.word + ' ' + (this.state.value==='drawn' ? styles.shown : styles.hidden)}> {this.props.word} </span>
         <span id={'score-'+this.props.word} name='score' className={styles.score + ' ' + (this.state.value==='flipped' ? styles.shown : styles.hidden)}> {this.props.score} </span>
       </div>
-    );
+    )
   }
 }
 
-Card.propTypes = { word: React.PropTypes.string, score: React.PropTypes.number };
-Card.defaultProps = { word: 'Flipit' };
+Card.propTypes = { 
+  word: PropTypes.string.isRequired, 
+  score: PropTypes.number.isRequired, 
+  onScorePoints: PropTypes.func.isRequired 
+}
+Card.defaultProps = { 
+  word: 'Flipit', 
+  score: 12, 
+  onScorePoints: function() {} 
+}
 

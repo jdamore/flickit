@@ -1,8 +1,7 @@
-'use strict';
+'use strict'
 
 export default [
-
-				'epilobium',
+		'epilobium',
       	'metaphysical',
       	'occasioning',
       	'rassling',
@@ -61,5 +60,4 @@ export default [
       	'precocity',
       	'two-phase',
       	'unparliamentary'
-
-];
+]

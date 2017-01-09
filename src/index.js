@@ -1,15 +1,18 @@
-'use strict';
+'use strict'
 
-import React from 'react';
-import ReactDom from 'react-dom';
-import QueryString from 'query-string';
+import React from 'react'
+import ReactDom from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
 
-import Lexicon from './lexicon';
-import App from './app';
+import reducers from './reducers'
+import AppContainer from './containers'
 
-let qs = QueryString.parse(location.search);
+let store = createStore(reducers)
 
 ReactDom.render(
-	<App lexicon={Lexicon[qs.lexicon]} />,
+	<Provider store={store}>
+		<AppContainer/>
+	</Provider>,
 	document.getElementById('app')
-);
+)
