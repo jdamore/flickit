@@ -3,7 +3,9 @@
 *.log
 *.map
 back
+bundle.js
 scratch
+style.css
 node_modules
 npm-debug.log
 public
