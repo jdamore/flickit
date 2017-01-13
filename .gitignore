@@ -1,14 +1,9 @@
 .DS_Store
 **/*.tmp.js
 *.log
-bundle.js*
-DomElement_Attributes.js
-DomElement_Functions.js
-images
+*.map
+back
+scratch
 node_modules
 npm-debug.log
-pact-mock-service-*
-pacts/**/*.log
 public
-scratch
-style.css*
