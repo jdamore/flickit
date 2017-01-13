@@ -10,3 +10,4 @@ DomElement_Functions.js
 pact-mock-service-*
 pacts/**/*.log
 *.log
+build-script-*
