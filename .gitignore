@@ -2,13 +2,12 @@
 **/*.tmp.js
 scratch
 public
-!bundle.js
-!node_modules/react/dist/react.min.js
-!node_modules/babel-polyfill/dist/polyfill.min.js
 node_modules
+!bundle.js
 npm-debug.log
 DomElement_Attributes.js
 DomElement_Functions.js
 pact-mock-service-*
 pacts/**/*.log
 *.log
+build-script-*

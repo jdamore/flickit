@@ -1,5 +1,5 @@
-# flickit
+# flipit
 
-[![Build Status](https://snap-ci.com/jdamore/flickit/branch/master/build_image)](https://snap-ci.com/jdamore/flickit/branch/master)
+[![Build Status](https://snap-ci.com/jdamore/flipit/branch/master/build_image)](https://snap-ci.com/jdamore/flickit/branch/master)
 
-Flick and read educational app
+Flip and read educational app
