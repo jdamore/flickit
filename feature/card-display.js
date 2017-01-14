@@ -32,13 +32,13 @@ test.describe('Display Card', function() {
     });
   });
 
-  test.it('shows the expected score when flipped', function () {
+  test.it('shows the expected score and the word when flipped', function () {
     driver.get(config.url+'?lexicon=lo');
     var card = driver.findElement(webdriver.By.id('card-consectetuer'));
     card.click();
     card.click();
     driver.findElement(webdriver.By.id('score-consectetuer')).getText().then(function(score) {
-      assert.equal(score, '12', "Card showing '" + score + "'' instead of the expected score '12'");
+      assert.equal(score, '12\nconsectetuer', "Card showing '" + score + "'' instead of the expected score '12'");
     });
   });
 
