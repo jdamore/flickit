@@ -6,7 +6,7 @@ var config = {
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
-        publicPath: 'http://localhost:8090/public'
+        publicPath: './',
     },
     module: {
         loaders: [
