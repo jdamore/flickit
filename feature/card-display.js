@@ -38,7 +38,7 @@ test.describe('Display Card', function() {
     card.click();
     card.click();
     driver.findElement(webdriver.By.id('score-consectetuer')).getText().then(function(score) {
-      assert.equal(score, '12\nconsectetuer', "Card showing '" + score + "'' instead of the expected score '12'");
+      assert.equal(score, '42\nconsectetuer', "Card showing '" + score + "'' instead of the expected score '12'");
     });
   });
 

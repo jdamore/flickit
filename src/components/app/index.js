@@ -13,7 +13,7 @@ const App = ({ lexicon, score, onScorePoints }) => (
     <div id='deck' name='deck' className={styles.deck}>
       {lexicon.map((word, i) =>
           <div id={'card-container-'+word} name='card-container' className={styles.card + ' ' + (i===0?styles.firstcard:'')} >
-            <Card word={word} score={12} onScorePoints={onScorePoints}/>
+            <Card word={word} score={42} onScorePoints={onScorePoints}/>
           </div>
       )}
     </div>
