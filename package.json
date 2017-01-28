@@ -64,7 +64,6 @@
     "chai-spies": "^0.7.1",
     "css-loader": "^0.26.1",
     "enzyme": "^2.7.1",
-    "enzyme-matchers": "^2.1.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.4",
     "http-server": "^0.8.5",

@@ -4,7 +4,7 @@ import chai, { expect } from 'chai'
 import chaiEnzyme from 'chai-enzyme'
 
 import Scoreboard from '../../src/components/scoreboard/index'
-import Styles from '../../src/components/scoreboard/index.scss';
+import Styles from '../../src/components/scoreboard/index.scss'
 
 describe('<Scoreboard />', () => {
 
