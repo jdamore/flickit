@@ -5,8 +5,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-addons-test-utils';
 
-import Card from '../src/components/card/index';
-import Styles from '../src/components/card/index.scss';
+import Card from '../../src/components/card/index';
+import Styles from '../../src/components/card/index.scss';
 
 Styles.container = 'container';
 Styles.flipped = 'flipped';
